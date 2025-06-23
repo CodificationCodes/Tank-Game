@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2ifpfkem6ybk"]
+
+[ext_resource type="Script" uid="uid://bv64k52yoje1s" path="res://assets/scripts/tank_2.gd" id="1_rxbg4"]
+[ext_resource type="Texture2D" uid="uid://osx2lhtc2jla" path="res://assets/media/abrams/Tank1.jpeg" id="2_c5mow"]
+[ext_resource type="Texture2D" uid="uid://lcwpkjnvofct" path="res://assets/media/abrams/final brams.png" id="3_djvta"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_61cqw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hq0j8"]
+size = Vector2(128, 128)
+
+[node name="Tank 2" type="CharacterBody2D"]
+script = ExtResource("1_rxbg4")
+
+[node name="LookAt" type="Node2D" parent="."]
+
+[node name="Hull" type="Sprite2D" parent="."]
+texture_filter = 1
+rotation = 1.5708
+texture = ExtResource("2_c5mow")
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+scale = Vector2(5.14966, 2.59954)
+shape = SubResource("RectangleShape2D_61cqw")
+
+[node name="Hit Box" type="Area2D" parent="."]
+scale = Vector2(0.804573, 0.406147)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hit Box"]
+scale = Vector2(1.00002, 1.00002)
+shape = SubResource("RectangleShape2D_hq0j8")
+
+[node name="Barrel1" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-12.1931, -0.0119371)
+rotation = 1.5708
+scale = Vector2(1.00236, 1.0477)
+texture = ExtResource("3_djvta")
+offset = Vector2(0.0119333, -27.1253)
+
+[connection signal="area_entered" from="Hit Box" to="." method="_on_hit_box_area_entered"]
+[connection signal="area_exited" from="Hit Box" to="." method="_on_hit_box_area_exited"]

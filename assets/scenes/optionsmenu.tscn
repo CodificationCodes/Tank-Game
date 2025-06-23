@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://btkulf65iv8bd"]
+
+[ext_resource type="Texture2D" uid="uid://doqfqyew53nwx" path="res://assets/media/tyler clicker/word.jpg" id="1_sifd2"]
+[ext_resource type="Texture2D" uid="uid://bvad4dunal5m5" path="res://assets/media/tyler clicker/Tyler clicker.png" id="2_mqu13"]
+[ext_resource type="PackedScene" uid="uid://8427c4kuqt5f" path="res://assets/scenes/tank1.tscn" id="3_6p3eo"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Word" type="Sprite2D" parent="."]
+position = Vector2(581, 407)
+scale = Vector2(1.39259, 0.290317)
+texture = ExtResource("1_sifd2")
+
+[node name="TylerClicker" type="Sprite2D" parent="."]
+position = Vector2(537, 135)
+scale = Vector2(2.62347, 3.47652)
+texture = ExtResource("2_mqu13")
+
+[node name="Tank 1" parent="." instance=ExtResource("3_6p3eo")]
+position = Vector2(127, 81)
+
+[node name="Tank 2" parent="." instance=ExtResource("3_6p3eo")]
+position = Vector2(120, 215)
+
+[node name="Tank 3" parent="." instance=ExtResource("3_6p3eo")]
+position = Vector2(122, 316)
