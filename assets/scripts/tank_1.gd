@@ -19,7 +19,7 @@ extends CharacterBody2D
 @export var barrel_rotation_speed: float = 2.0
 @onready var barrel = $Barrel1
 @onready var lookat = $LookAt
-var bullet_scene = load("res://assets/scenes/Bullet.tscn") as PackedScene
+var bullet_scene = load("res://assets/scenes/shell.tscn") as PackedScene
 
 
 func _physics_process(delta):
@@ -42,16 +42,17 @@ func _physics_process(delta):
 	var direction := Vector2(cos(rotation), sin(rotation))
 	velocity = velocity.lerp(direction * move_input * speed, lerp_weight)
 	
+	# Run Fire
 	if Input.is_action_just_pressed("tank1fire"):
 		fire()
-		#print("1fire")
 
 	move_and_slide()
 
+# Instatiate and rotate shell scene
 func fire():
 	if bullet_scene:
 		#print(rotation_degrees)
 		var bullet = bullet_scene.instantiate()
 		bullet.global_position = barrel.global_position
-		bullet.rotation = barrel.global_rotation
+		bullet.global_rotation = barrel.global_rotation
 		get_parent().add_child(bullet)

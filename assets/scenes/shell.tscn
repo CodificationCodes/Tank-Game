@@ -1,16 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://c1r7txmmeiiul"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_6gjt1"]
+[ext_resource type="Script" uid="uid://cs2olspdor3cw" path="res://assets/scripts/shell.gd" id="1_fehmp"]
+[ext_resource type="Texture2D" uid="uid://ieh78g7svpm3" path="res://assets/media/abrams/Abrams Bullet.png" id="2_dgbsy"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6uy2u"]
-size = Vector2(32, 15)
-
-[node name="Shell" type="RigidBody2D"]
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_fehmp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(32, 15)
-texture = SubResource("PlaceholderTexture2D_6gjt1")
+texture = ExtResource("2_dgbsy")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_6uy2u")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-1.5, -5.5, -1.5, 5.5, 1.5, 5.5, 1.5, -5.5)

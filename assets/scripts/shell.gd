@@ -10,7 +10,14 @@
 #
 #MIT license (See README.md for info)
 #Copyright (c) 2025 Spike Forsythe ❤️
+#Script adapted from William Edwards @ bad games
 
-extends Node
+extends Area2D
 
-var playerName
+func _ready() -> void:
+	position.x += sin(rotation) * 90
+	position.y -= cos(rotation) * 90
+
+func _physics_process(delta: float) -> void:
+	position.x += sin(rotation) * 1000 * delta
+	position.y -= cos(rotation) * 1000 * delta

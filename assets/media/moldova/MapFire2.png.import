@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqs4lstkw85s4"
-path="res://.godot/imported/Ground Texture (Tank Game)-4.png.png-67123b94c7ab7e4b40439e1de2d6b804.ctex"
+uid="uid://bnqpnjfxo1d5x"
+path="res://.godot/imported/MapFire2.png-b9c5db42c159e500fd6aef736ccdb8cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/media/Ground Texture (Tank Game)-4.png.png"
-dest_files=["res://.godot/imported/Ground Texture (Tank Game)-4.png.png-67123b94c7ab7e4b40439e1de2d6b804.ctex"]
+source_file="res://assets/media/moldova/MapFire2.png"
+dest_files=["res://.godot/imported/MapFire2.png-b9c5db42c159e500fd6aef736ccdb8cc.ctex"]
 
 [params]
 

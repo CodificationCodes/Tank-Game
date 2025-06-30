@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cnns7rolahkmd"]
 
 [ext_resource type="Script" uid="uid://clum80jjkvycd" path="res://assets/scripts/mainmenu.gd" id="1_natt5"]
-[ext_resource type="Texture2D" uid="uid://dj6tclp0y2ax8" path="res://assets/media/Mock up by Programmer.png" id="2_r3g3c"]
+[ext_resource type="Texture2D" uid="uid://dj6tclp0y2ax8" path="res://assets/media/menus/Mock up by Programmer.png" id="2_r3g3c"]
 [ext_resource type="Texture2D" uid="uid://deny5yyeg8ugw" path="res://assets/media/Untitled design (3).png" id="3_7op8g"]
 [ext_resource type="Texture2D" uid="uid://cdsfc0xm5yt4y" path="res://assets/media/Untitled design (4).png" id="4_mo8e2"]
 [ext_resource type="Script" uid="uid://dbgxa6lrmblja" path="res://assets/scripts/mini_tank_barrel.gd" id="5_nrxli"]

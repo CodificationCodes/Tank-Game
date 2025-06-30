@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://8427c4kuqt5f" path="res://assets/scenes/tank1.tscn" id="1_nnsk1"]
 [ext_resource type="PackedScene" uid="uid://b2ifpfkem6ybk" path="res://assets/scenes/tank2.tscn" id="2_rwgxs"]
 [ext_resource type="FontFile" uid="uid://blpsjmcwfqmth" path="res://assets/Panzer.ttf" id="4_0moxn"]
-[ext_resource type="Texture2D" uid="uid://dqs4lstkw85s4" path="res://assets/media/Ground Texture (Tank Game)-4.png.png" id="4_vu0c7"]
+[ext_resource type="Texture2D" uid="uid://dqs4lstkw85s4" path="res://assets/media/moldova/MoldovaProto.png" id="4_vu0c7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0juu"]
 size = Vector2(1373.07, 97)
