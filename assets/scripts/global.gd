@@ -15,7 +15,12 @@ extends Node
 
 var playerName
 var tank1IDselected
-var tank2IDSelected
+var tank2IDselected
 
-func _process(delta: float) -> void:
-	pass
+func _ready():
+	debug_loop()
+	
+func debug_loop() -> void:
+	while true:
+		print("Tank 1 ID:" + str(tank1IDselected))
+		await get_tree().create_timer(2.0).timeout

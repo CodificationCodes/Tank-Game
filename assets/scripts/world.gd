@@ -31,7 +31,7 @@ func _ready():
 	if Global.tank2IDselected == 1:
 		var tank2 = abrams2.instantiate()
 		add_child(tank2)
-	elif Global.tank2IDSelected == 2:
+	elif Global.tank2IDselected == 2:
 		pass
 	else:
 		pass
