@@ -1,10 +1,24 @@
-[gd_scene load_steps=9 format=3 uid="uid://0ixkvmhb8ge0"]
+[gd_scene load_steps=10 format=3 uid="uid://bol07ursldr83"]
 
-[ext_resource type="Script" uid="uid://blx44v1i2e3q6" path="res://assets/scripts/world.gd" id="1_gc7y0"]
-[ext_resource type="PackedScene" uid="uid://8427c4kuqt5f" path="res://assets/scenes/abrams1.tscn" id="1_nnsk1"]
-[ext_resource type="PackedScene" uid="uid://b2ifpfkem6ybk" path="res://assets/scenes/abrams2.tscn" id="2_rwgxs"]
-[ext_resource type="FontFile" uid="uid://blpsjmcwfqmth" path="res://assets/Panzer.ttf" id="4_0moxn"]
-[ext_resource type="Texture2D" uid="uid://dqs4lstkw85s4" path="res://assets/media/moldova/MoldovaProto.png" id="4_vu0c7"]
+[ext_resource type="Script" uid="uid://blx44v1i2e3q6" path="res://assets/scripts/world.gd" id="1_b7dy1"]
+[ext_resource type="Texture2D" uid="uid://0luv331v27ju" path="res://assets/media/moldova/MapFire1.png" id="2_47nxv"]
+[ext_resource type="Texture2D" uid="uid://bnqpnjfxo1d5x" path="res://assets/media/moldova/MapFire2.png" id="3_owieu"]
+[ext_resource type="Texture2D" uid="uid://dqs4lstkw85s4" path="res://assets/media/moldova/MoldovaProto.png" id="4_owieu"]
+[ext_resource type="FontFile" uid="uid://blpsjmcwfqmth" path="res://assets/Panzer.ttf" id="5_v8n5k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v8n5k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_47nxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_owieu")
+}],
+"loop": true,
+"name": &"loop",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0juu"]
 size = Vector2(1373.07, 97)
@@ -13,28 +27,27 @@ size = Vector2(1373.07, 97)
 size = Vector2(107.5, 840.5)
 
 [sub_resource type="LabelSettings" id="LabelSettings_vu0c7"]
-font = ExtResource("4_0moxn")
+font = ExtResource("5_v8n5k")
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 
 [node name="World Collection" type="Node2D"]
-script = ExtResource("1_gc7y0")
+script = ExtResource("1_b7dy1")
 
-[node name="Tank Body1" parent="." instance=ExtResource("1_nnsk1")]
-z_index = 1
-position = Vector2(63, 39)
-
-[node name="Tank Body2" parent="." instance=ExtResource("2_rwgxs")]
-z_index = 1
-position = Vector2(739, 414)
-rotation = 3.14159
+[node name="Fire" type="AnimatedSprite2D" parent="."]
+z_index = 2
+texture_filter = 1
+position = Vector2(1041, 335)
+sprite_frames = SubResource("SpriteFrames_v8n5k")
+animation = &"loop"
+frame_progress = 0.620066
 
 [node name="Ground Texture" type="TextureRect" parent="."]
 texture_filter = 1
 offset_right = 256.0
 offset_bottom = 40.0
 size_flags_horizontal = 4
-texture = ExtResource("4_vu0c7")
+texture = ExtResource("4_owieu")
 
 [node name="Borders" type="StaticBody2D" parent="."]
 scale = Vector2(1.00068, 1.00068)
@@ -69,10 +82,10 @@ texture_filter = 2
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 480.0
-offset_top = 7.0
-offset_right = 538.0
-offset_bottom = 30.0
+offset_left = 485.0
+offset_top = -171.0
+offset_right = 543.0
+offset_bottom = -148.0
 grow_horizontal = 0
 pivot_offset = Vector2(29, 13)
 text = "names"

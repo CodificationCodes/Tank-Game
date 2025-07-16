@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://dwksu536a12jk"]
+[gd_scene load_steps=5 format=3 uid="uid://dwksu536a12jk"]
 
 [ext_resource type="Texture2D" uid="uid://ttnocpi0rdjp" path="res://assets/media/menus/TankSelector.png" id="1_bgee7"]
+[ext_resource type="Script" uid="uid://bbqvmptkxgj1n" path="res://assets/scripts/tankselector.gd" id="1_gq7uj"]
+[ext_resource type="Texture2D" uid="uid://bam00hn8v670l" path="res://assets/media/buttons/Tank Selection.png" id="2_7nga2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t2vei"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"TankSelection",
+"speed": 5.0
+}]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -9,6 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_gq7uj")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -23,3 +34,47 @@ offset_top = 514.0
 offset_right = 759.0
 offset_bottom = 621.0
 flat = true
+
+[node name="Select1Left" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 288.0
+offset_right = 197.0
+offset_bottom = 373.0
+texture_normal = ExtResource("2_7nga2")
+
+[node name="Select1Right" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 491.0
+offset_top = 288.0
+offset_right = 569.0
+offset_bottom = 373.0
+texture_normal = ExtResource("2_7nga2")
+flip_h = true
+
+[node name="Select2Left" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 631.0
+offset_top = 288.0
+offset_right = 709.0
+offset_bottom = 373.0
+texture_normal = ExtResource("2_7nga2")
+
+[node name="Select2Right" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1003.0
+offset_top = 288.0
+offset_right = 1081.0
+offset_bottom = 373.0
+texture_normal = ExtResource("2_7nga2")
+flip_h = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_t2vei")
+animation = &"TankSelection"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Select1Left" to="." method="_on_select_1_left_pressed"]
+[connection signal="pressed" from="Select1Right" to="." method="_on_select_1_right_pressed"]
+[connection signal="pressed" from="Select2Left" to="." method="_on_select_2_left_pressed"]
+[connection signal="pressed" from="Select2Right" to="." method="_on_select_2_right_pressed"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://btkulf65iv8bd"]
+[gd_scene load_steps=5 format=3 uid="uid://btkulf65iv8bd"]
 
 [ext_resource type="Texture2D" uid="uid://doqfqyew53nwx" path="res://assets/media/tyler clicker/word.jpg" id="1_sifd2"]
+[ext_resource type="Script" uid="uid://cntq5ew28of01" path="res://assets/scripts/tyler.gd" id="2_d3uha"]
 [ext_resource type="Texture2D" uid="uid://bvad4dunal5m5" path="res://assets/media/tyler clicker/Tyler clicker.png" id="2_mqu13"]
-[ext_resource type="PackedScene" uid="uid://8427c4kuqt5f" path="res://assets/scenes/tank1.tscn" id="3_6p3eo"]
+[ext_resource type="PackedScene" uid="uid://8427c4kuqt5f" path="res://assets/scenes/abrams1.tscn" id="3_6p3eo"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -16,6 +17,7 @@ grow_vertical = 2
 position = Vector2(581, 407)
 scale = Vector2(1.39259, 0.290317)
 texture = ExtResource("1_sifd2")
+script = ExtResource("2_d3uha")
 
 [node name="TylerClicker" type="Sprite2D" parent="."]
 position = Vector2(537, 135)

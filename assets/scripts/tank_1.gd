@@ -20,7 +20,7 @@ extends CharacterBody2D
 @onready var barrel = $Barrel1
 @onready var lookat = $LookAt
 var bullet_scene = load("res://assets/scenes/shell.tscn") as PackedScene
-
+var can_fire = true
 
 func _physics_process(delta):
 	# Barrel rotation with Q/E
@@ -43,8 +43,11 @@ func _physics_process(delta):
 	velocity = velocity.lerp(direction * move_input * speed, lerp_weight)
 	
 	# Run Fire
-	if Input.is_action_just_pressed("tank1fire"):
+	if Input.is_action_just_pressed("tank1fire") and can_fire:
+		can_fire = false
 		fire()
+		await get_tree().create_timer(2).timeout
+		can_fire = true
 
 	move_and_slide()
 

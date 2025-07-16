@@ -14,3 +14,8 @@
 extends Node
 
 var playerName
+var tank1IDselected
+var tank2IDSelected
+
+func _process(delta: float) -> void:
+	pass
