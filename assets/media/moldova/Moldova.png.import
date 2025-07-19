@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqs4lstkw85s4"
-path="res://.godot/imported/MoldovaProto.png-d7c6237c567b4ce5ebb817e3607b4edb.ctex"
+uid="uid://dprfttem2p01p"
+path="res://.godot/imported/Moldova.png-b41b64f9d086a7f6f8cc0bc603b4b42b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/media/moldova/MoldovaProto.png"
-dest_files=["res://.godot/imported/MoldovaProto.png-d7c6237c567b4ce5ebb817e3607b4edb.ctex"]
+source_file="res://assets/media/moldova/Moldova.png"
+dest_files=["res://.godot/imported/Moldova.png-b41b64f9d086a7f6f8cc0bc603b4b42b.ctex"]
 
 [params]
 

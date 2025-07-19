@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://8427c4kuqt5f"]
+[gd_scene load_steps=7 format=3 uid="uid://8427c4kuqt5f"]
 
 [ext_resource type="Script" uid="uid://wp8al3whad3w" path="res://assets/scripts/tank_1.gd" id="1_61cqw"]
 [ext_resource type="Texture2D" uid="uid://osx2lhtc2jla" path="res://assets/media/abrams/Tank1.jpeg" id="2_hq0j8"]
 [ext_resource type="Texture2D" uid="uid://lcwpkjnvofct" path="res://assets/media/abrams/final brams.png" id="3_gcekf"]
+[ext_resource type="PackedScene" uid="uid://vexikfxladr6" path="res://trail.tscn" id="4_uulch"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61cqw"]
+size = Vector2(16.7001, 17.6954)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hq0j8"]
 size = Vector2(128, 128)
@@ -41,6 +43,23 @@ rotation = 1.5708
 scale = Vector2(1.00236, 1.0477)
 texture = ExtResource("3_gcekf")
 offset = Vector2(0.00781915, -26.9634)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+z_index = 1
+position = Vector2(-11.0234, -0.0078125)
+rotation = 1.5708
+scale = Vector2(1.00236, 1.0477)
+polygon = PackedVector2Array(4.00782, -90.9634, -4.99218, -90.9634, -4.99218, -35.1634, -22.4922, -24.9634, -22.9922, -0.763405, -19.9922, 32.2366, -19.9922, 37.0366, 19.8078, 37.0366, 23.0078, 4.4366, 23.0078, -25.3634, 8.60782, -33.9634, 6.50782, -33.9634, 4.50782, -40.9634)
+
+[node name="TrailPos1" type="Marker2D" parent="."]
+position = Vector2(-48, -22)
+
+[node name="Line2D" parent="TrailPos1" instance=ExtResource("4_uulch")]
+
+[node name="TrailPos2" type="Marker2D" parent="."]
+position = Vector2(-48, 22)
+
+[node name="Line2D" parent="TrailPos2" instance=ExtResource("4_uulch")]
 
 [connection signal="area_entered" from="Hit Box" to="." method="_on_hit_box_area_entered"]
 [connection signal="area_exited" from="Hit Box" to="." method="_on_hit_box_area_exited"]

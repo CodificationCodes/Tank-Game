@@ -1,12 +1,34 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwksu536a12jk"]
+[gd_scene load_steps=9 format=3 uid="uid://dwksu536a12jk"]
 
 [ext_resource type="Texture2D" uid="uid://ttnocpi0rdjp" path="res://assets/media/menus/TankSelector.png" id="1_bgee7"]
 [ext_resource type="Script" uid="uid://bbqvmptkxgj1n" path="res://assets/scripts/tankselector.gd" id="1_gq7uj"]
 [ext_resource type="Texture2D" uid="uid://bam00hn8v670l" path="res://assets/media/buttons/Tank Selection.png" id="2_7nga2"]
+[ext_resource type="Texture2D" uid="uid://dxe1pwnbbrx40" path="res://assets/media/menus/Numbwer.png" id="4_8hdmj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2vei"]
+atlas = ExtResource("4_8hdmj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6fgx2"]
+atlas = ExtResource("4_8hdmj")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwfvd"]
+atlas = ExtResource("4_8hdmj")
+region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t2vei"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2vei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6fgx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwfvd")
+}],
 "loop": true,
 "name": &"TankSelection",
 "speed": 5.0
@@ -69,7 +91,17 @@ offset_bottom = 373.0
 texture_normal = ExtResource("2_7nga2")
 flip_h = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Tank1VisualRef" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(347.75, 335.75)
+scale = Vector2(7.76562, 7.76562)
+sprite_frames = SubResource("SpriteFrames_t2vei")
+animation = &"TankSelection"
+
+[node name="Tank2VisualRef" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(858, 336)
+scale = Vector2(7.76562, 7.76562)
 sprite_frames = SubResource("SpriteFrames_t2vei")
 animation = &"TankSelection"
 
