@@ -11,15 +11,16 @@
 #
 #MIT license (See README.md for info)
 #Copyright (c) 2025 Spike Forsythe ❤️
-#Script adapted from Godot Academy | Tank Trails
+#Script adapted from Godot Academy | Vehicle Trails
 
 extends Line2D
 
 var point
 
+#Set to top layer so its always visable
 func _ready():
 	set_as_top_level(true)
-	
+#Fade the effect out 	/ add the effect
 func _physics_process(delta):
 	point = get_parent().global_position
 	add_point(point)

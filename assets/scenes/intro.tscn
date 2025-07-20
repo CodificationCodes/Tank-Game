@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://dn0jrpn57ufuh"]
+
+[ext_resource type="Texture2D" uid="uid://b30d06mflh5po" path="res://assets/media/menus/IntroScreen.png" id="1_e2c8y"]
+[ext_resource type="Script" uid="uid://dq3acjhr6an5f" path="res://assets/scenes/intro.gd" id="1_vxlar"]
+[ext_resource type="AudioStream" uid="uid://dwboyex48234r" path="res://assets/media/audio/Decisions - Kevin Macleod.mp3" id="3_y745p"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vxlar")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 3600.0
+offset_bottom = 2025.0
+scale = Vector2(0.334354, 0.333354)
+mouse_filter = 0
+texture = ExtResource("1_e2c8y")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 1200.0
+offset_bottom = 675.0
+flat = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_y745p")
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

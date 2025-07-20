@@ -16,9 +16,19 @@
 extends Area2D
 
 func _ready() -> void:
-	position.x += sin(rotation) * 90
-	position.y -= cos(rotation) * 90
+	position.x += sin(rotation) * 105
+	position.y -= cos(rotation) * 105
+	set_as_top_level(true)
 
 func _physics_process(delta: float) -> void:
 	position.x += sin(rotation) * 1000 * delta
 	position.y -= cos(rotation) * 1000 * delta
+	
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Tank1"):
+		Global.tank1health -= 1
+		print("Tank1Health: " + str(Global.tank1health))
+	else:
+		Global.tank2health -= 1
+		print("Tank2Health: " + str(Global.tank2health)) 
+	queue_free()

@@ -11,6 +11,7 @@
 #
 #MIT license (See README.md for info)
 #Copyright (c) 2025 Spike Forsythe ❤️
+#THIS IS THE OLD TANK SELECTOR, FOR REFERENCE ONLY
 
 extends Control
 # These are the tanks id's, 1 = abrams, 2 = another tank, 3 = dev car
@@ -37,8 +38,8 @@ func _process(_delta):
 		tank2selection = 1
 		tank2currentframe = 0
 
-func _on_play_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://assets/scenes/moldova.tscn")
+#func _on_play_button_pressed() -> void:
+#	get_tree().change_scene_to_file("res://assets/scenes/moldova.tscn")
 
 func _on_select_1_right_pressed() -> void:
 	tank1selection = tank1selection + 1

@@ -2,8 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://ttnocpi0rdjp" path="res://assets/media/menus/TankSelector.png" id="1_bgee7"]
 [ext_resource type="Script" uid="uid://bbqvmptkxgj1n" path="res://assets/scripts/tankselector.gd" id="1_gq7uj"]
-[ext_resource type="Texture2D" uid="uid://bam00hn8v670l" path="res://assets/media/buttons/Tank Selection.png" id="2_7nga2"]
 [ext_resource type="Texture2D" uid="uid://dxe1pwnbbrx40" path="res://assets/media/menus/Numbwer.png" id="4_8hdmj"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gq7uj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t2vei"]
 atlas = ExtResource("4_8hdmj")
@@ -63,7 +64,7 @@ offset_left = 119.0
 offset_top = 288.0
 offset_right = 197.0
 offset_bottom = 373.0
-texture_normal = ExtResource("2_7nga2")
+texture_normal = SubResource("CompressedTexture2D_gq7uj")
 
 [node name="Select1Right" type="TextureButton" parent="."]
 layout_mode = 0
@@ -71,7 +72,7 @@ offset_left = 491.0
 offset_top = 288.0
 offset_right = 569.0
 offset_bottom = 373.0
-texture_normal = ExtResource("2_7nga2")
+texture_normal = SubResource("CompressedTexture2D_gq7uj")
 flip_h = true
 
 [node name="Select2Left" type="TextureButton" parent="."]
@@ -80,7 +81,7 @@ offset_left = 631.0
 offset_top = 288.0
 offset_right = 709.0
 offset_bottom = 373.0
-texture_normal = ExtResource("2_7nga2")
+texture_normal = SubResource("CompressedTexture2D_gq7uj")
 
 [node name="Select2Right" type="TextureButton" parent="."]
 layout_mode = 0
@@ -88,7 +89,7 @@ offset_left = 1003.0
 offset_top = 288.0
 offset_right = 1081.0
 offset_bottom = 373.0
-texture_normal = ExtResource("2_7nga2")
+texture_normal = SubResource("CompressedTexture2D_gq7uj")
 flip_h = true
 
 [node name="Tank1VisualRef" type="AnimatedSprite2D" parent="."]

@@ -17,6 +17,8 @@ extends Node
 var playerName
 var tank1IDselected : int = 1
 var tank2IDselected : int = 1
+var tank1health : int = 5
+var tank2health : int = 5
 
 func _ready():
 	debug_loop()

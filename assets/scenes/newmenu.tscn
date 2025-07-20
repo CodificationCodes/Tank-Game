@@ -1,0 +1,188 @@
+[gd_scene load_steps=22 format=3 uid="uid://bm82kc7vftxf7"]
+
+[ext_resource type="Script" uid="uid://d1et57o75qc08" path="res://assets/scenes/MainMenu.gd" id="1_0u3re"]
+[ext_resource type="Texture2D" uid="uid://cqmo3caijsy2i" path="res://assets/media/menus/MainMenu.png" id="1_yidlm"]
+[ext_resource type="Texture2D" uid="uid://bc4iu1wu1dwkc" path="res://assets/media/buttons/Settings1.png" id="2_0rbbo"]
+[ext_resource type="Texture2D" uid="uid://c8jsyav1miph6" path="res://assets/media/buttons/Settings2.png" id="3_mjqqm"]
+[ext_resource type="Texture2D" uid="uid://ck3wb4xlk60c8" path="res://assets/media/buttons/Quit1.png" id="4_gepb1"]
+[ext_resource type="Texture2D" uid="uid://cf0u0yf5p3wj5" path="res://assets/media/buttons/Quit2.png" id="5_1ddae"]
+[ext_resource type="Texture2D" uid="uid://bowvtu00hd82a" path="res://assets/media/buttons/Credits1.png" id="6_bdmk7"]
+[ext_resource type="Texture2D" uid="uid://cwxjdraqgnm1b" path="res://assets/media/buttons/Credits2.png" id="7_rp8oe"]
+[ext_resource type="Texture2D" uid="uid://deltvxs02j8mh" path="res://assets/media/buttons/Begin1.png" id="8_0u3re"]
+[ext_resource type="Texture2D" uid="uid://c3tveva026hqp" path="res://assets/media/buttons/Begin2.png" id="9_kt0lu"]
+[ext_resource type="Texture2D" uid="uid://c2kk1cqm8jqt8" path="res://assets/media/buttons/TankSel.png" id="10_1ddae"]
+[ext_resource type="Texture2D" uid="uid://dj4utmfmbg5xs" path="res://assets/media/buttons/VehicleSel.png" id="12_kt0lu"]
+[ext_resource type="Texture2D" uid="uid://dxe1pwnbbrx40" path="res://assets/media/menus/Numbwer.png" id="13_lkbtv"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bdmk7"]
+load_path = "res://.godot/imported/TankSel.png-29f685aeb0b754d7bf988d4f508ff219.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lcy4l"]
+load_path = "res://.godot/imported/VehicleSel.png-355370564788bbe14ac76ebd3c49e0f6.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fh8go"]
+load_path = "res://.godot/imported/VehicleSel.png-355370564788bbe14ac76ebd3c49e0f6.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d62nu"]
+load_path = "res://.godot/imported/VehicleSel.png-355370564788bbe14ac76ebd3c49e0f6.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2vei"]
+atlas = ExtResource("13_lkbtv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6fgx2"]
+atlas = ExtResource("13_lkbtv")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwfvd"]
+atlas = ExtResource("13_lkbtv")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d6alf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2vei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6fgx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwfvd")
+}],
+"loop": true,
+"name": &"TankSelection",
+"speed": 5.0
+}]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0u3re")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.33334, 0.33334)
+texture = ExtResource("1_yidlm")
+
+[node name="Buttons" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Settings" type="TextureButton" parent="Buttons"]
+layout_mode = 0
+offset_left = 53.8002
+offset_top = 286.654
+offset_right = 535.8
+offset_bottom = 470.654
+scale = Vector2(0.333, 0.333)
+texture_normal = ExtResource("2_0rbbo")
+texture_hover = ExtResource("3_mjqqm")
+
+[node name="Quit" type="TextureButton" parent="Buttons"]
+layout_mode = 0
+offset_left = 153.961
+offset_top = 369.641
+offset_right = 635.961
+offset_bottom = 553.641
+scale = Vector2(0.333, 0.333)
+texture_normal = ExtResource("4_gepb1")
+texture_hover = ExtResource("5_1ddae")
+
+[node name="Credits" type="TextureButton" parent="Buttons"]
+layout_mode = 0
+offset_left = 253.669
+offset_top = 286.654
+offset_right = 735.669
+offset_bottom = 470.654
+scale = Vector2(0.333, 0.333)
+texture_normal = ExtResource("6_bdmk7")
+texture_hover = ExtResource("7_rp8oe")
+
+[node name="Begin" type="TextureButton" parent="Buttons"]
+layout_mode = 0
+offset_left = 108.161
+offset_top = 157.908
+offset_right = 862.161
+offset_bottom = 491.908
+scale = Vector2(0.333, 0.333)
+texture_normal = ExtResource("8_0u3re")
+texture_hover = ExtResource("9_kt0lu")
+
+[node name="MapSelUp" type="TextureButton" parent="Buttons"]
+layout_mode = 0
+offset_left = 781.043
+offset_top = 50.1127
+offset_right = 955.043
+offset_bottom = 200.113
+scale = Vector2(0.333, 0.333)
+texture_normal = ExtResource("10_1ddae")
+
+[node name="MapSelDown" type="TextureButton" parent="Buttons"]
+layout_mode = 0
+offset_left = 781.043
+offset_top = 139.172
+offset_right = 955.043
+offset_bottom = 289.172
+scale = Vector2(0.333, 0.333)
+texture_normal = SubResource("CompressedTexture2D_bdmk7")
+flip_v = true
+
+[node name="P1VehicleUp" type="TextureButton" parent="Buttons"]
+layout_mode = 0
+offset_left = 775.771
+offset_top = 418.649
+offset_right = 907.771
+offset_bottom = 532.649
+scale = Vector2(0.333, 0.333)
+texture_normal = ExtResource("12_kt0lu")
+
+[node name="P1VehicleDown" type="TextureButton" parent="Buttons"]
+layout_mode = 0
+offset_left = 775.771
+offset_top = 486.094
+offset_right = 907.771
+offset_bottom = 600.094
+scale = Vector2(0.333, 0.333)
+texture_normal = SubResource("CompressedTexture2D_lcy4l")
+flip_v = true
+
+[node name="P2VehicleUp" type="TextureButton" parent="Buttons"]
+layout_mode = 0
+offset_left = 851.672
+offset_top = 417.66
+offset_right = 983.672
+offset_bottom = 531.66
+scale = Vector2(0.333, 0.333)
+texture_normal = SubResource("CompressedTexture2D_fh8go")
+
+[node name="P2VehicleDown" type="TextureButton" parent="Buttons"]
+layout_mode = 0
+offset_left = 851.672
+offset_top = 484.655
+offset_right = 983.672
+offset_bottom = 598.655
+scale = Vector2(0.333, 0.333)
+texture_normal = SubResource("CompressedTexture2D_d62nu")
+flip_v = true
+
+[node name="Tank1VisualRef" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(637.773, 471.058)
+scale = Vector2(6.46138, 6.39682)
+sprite_frames = SubResource("SpriteFrames_d6alf")
+animation = &"TankSelection"
+
+[node name="Tank2VisualRef" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1053.45, 466.942)
+scale = Vector2(5.57037, 5.95685)
+sprite_frames = SubResource("SpriteFrames_d6alf")
+animation = &"TankSelection"

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Tank game"
-run/main_scene="uid://cnns7rolahkmd"
+run/main_scene="uid://dn0jrpn57ufuh"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/image="uid://jaoipydef22h"
 
@@ -31,7 +31,7 @@ project/assembly_name="Tank game"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/wakatime/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 [file_customization]
 
@@ -44,6 +44,8 @@ folder_colors={
 [global_group]
 
 Walls=""
+Tank1=""
+Tank2=""
 
 [input]
 

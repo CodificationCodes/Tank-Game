@@ -52,7 +52,10 @@ func _physics_process(delta):
 		fire()
 		await get_tree().create_timer(2).timeout
 		can_fire = true
-
+	
+	if Global.tank1health == 0:
+		queue_free()
+		
 	move_and_slide()
 
 # Instatiate and rotate shell scene

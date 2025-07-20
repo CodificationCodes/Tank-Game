@@ -11,22 +11,17 @@
 #
 #MIT license (See README.md for info)
 #Copyright (c) 2025 Spike Forsythe ❤️
-#THIS IS THE OLD MAIN MENU, DONT FORGET
+#Script adapted from Godot Academy | Vehicle Trails
 
-extends Control
+extends Line2D
 
-@onready var text_edit = $TextEdit
+var point
 
-func _process(delta):
-	pass
-#	Global.playerName = text_edit.text
-#	print(text_edit.text)
-#Button assignment
-func _on_exit_button_pressed():
-	get_tree().quit()
-
-func _on_options_button_pressed():
-	get_tree().change_scene_to_file("res://assets/scenes/optionsmenu.tscn")
-
-func _on_play_button_pressed():
-	get_tree().change_scene_to_file("res://assets/scenes/moldova.tscn")
+func _ready():
+	set_as_top_level(true)
+	
+func _physics_process(delta):
+	point = get_parent().global_position
+	add_point(point)
+	if points.size() > 100:
+		remove_point(0)

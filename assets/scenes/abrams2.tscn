@@ -3,14 +3,14 @@
 [ext_resource type="Script" uid="uid://bv64k52yoje1s" path="res://assets/scripts/tank_2.gd" id="1_rxbg4"]
 [ext_resource type="Texture2D" uid="uid://osx2lhtc2jla" path="res://assets/media/abrams/Tank1.jpeg" id="2_c5mow"]
 [ext_resource type="Texture2D" uid="uid://lcwpkjnvofct" path="res://assets/media/abrams/final brams.png" id="3_djvta"]
-[ext_resource type="PackedScene" uid="uid://vexikfxladr6" path="res://trail.tscn" id="4_pll8a"]
+[ext_resource type="PackedScene" uid="uid://vexikfxladr6" path="res://assets/scenes/trail.tscn" id="4_pll8a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61cqw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hq0j8"]
 size = Vector2(128, 128)
 
-[node name="Tank 2" type="CharacterBody2D"]
+[node name="Tank 2" type="CharacterBody2D" groups=["Tank2"]]
 script = ExtResource("1_rxbg4")
 
 [node name="LookAt" type="Node2D" parent="."]

@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://dmouiqp1tnw82" path="res://assets/scripts/dev_car2.gd" id="1_cj0xi"]
 [ext_resource type="Texture2D" uid="uid://cbwgkd833hs48" path="res://assets/media/devcar/devCar.png" id="2_3sqmt"]
-[ext_resource type="PackedScene" uid="uid://vexikfxladr6" path="res://trail.tscn" id="3_fnpej"]
+[ext_resource type="PackedScene" uid="uid://vexikfxladr6" path="res://assets/scenes/trail.tscn" id="3_fnpej"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61cqw"]
 size = Vector2(16.7001, 17.6954)
 
-[node name="DevCar" type="CharacterBody2D"]
+[node name="DevCar" type="CharacterBody2D" groups=["Tank2"]]
 script = ExtResource("1_cj0xi")
 
 [node name="LookAt" type="Node2D" parent="."]
