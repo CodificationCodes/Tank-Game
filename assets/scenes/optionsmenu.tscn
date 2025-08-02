@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://doqfqyew53nwx" path="res://assets/media/tyler clicker/word.jpg" id="1_sifd2"]
 [ext_resource type="Script" uid="uid://cntq5ew28of01" path="res://assets/scripts/tyler.gd" id="2_d3uha"]
 [ext_resource type="Texture2D" uid="uid://bvad4dunal5m5" path="res://assets/media/tyler clicker/Tyler clicker.png" id="2_mqu13"]
-[ext_resource type="PackedScene" uid="uid://8427c4kuqt5f" path="res://assets/scenes/abrams1.tscn" id="3_6p3eo"]
+[ext_resource type="PackedScene" uid="uid://dgdu4ixne0s1l" path="res://assets/scenes/abrams1.tscn" id="3_6p3eo"]
 
 [node name="Control" type="Control"]
 layout_mode = 3

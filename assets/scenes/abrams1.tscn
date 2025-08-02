@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://8427c4kuqt5f"]
+[gd_scene load_steps=7 format=3 uid="uid://dgdu4ixne0s1l"]
 
-[ext_resource type="Script" uid="uid://wp8al3whad3w" path="res://assets/scripts/tank_1.gd" id="1_61cqw"]
-[ext_resource type="Texture2D" uid="uid://osx2lhtc2jla" path="res://assets/media/abrams/Tank1.jpeg" id="2_hq0j8"]
+[ext_resource type="Script" uid="uid://frtlj0pacjek" path="res://assets/scripts/abrams1.gd" id="1_uulch"]
+[ext_resource type="Texture2D" uid="uid://c6ffra7vxiiqf" path="res://assets/media/abrams/Tank1.png" id="2_uulch"]
 [ext_resource type="Texture2D" uid="uid://lcwpkjnvofct" path="res://assets/media/abrams/final brams.png" id="3_gcekf"]
 [ext_resource type="PackedScene" uid="uid://vexikfxladr6" path="res://assets/scenes/trail.tscn" id="4_uulch"]
 
@@ -11,23 +11,22 @@ size = Vector2(16.7001, 17.6954)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hq0j8"]
 size = Vector2(128, 128)
 
-[node name="Tank 1" type="CharacterBody2D" groups=["Tank1"]]
-script = ExtResource("1_61cqw")
+[node name="Tank1" type="CharacterBody2D" groups=["Tank1"]]
+script = ExtResource("1_uulch")
 
 [node name="LookAt" type="Node2D" parent="."]
 
 [node name="Hull" type="Sprite2D" parent="."]
-z_index = 2
+z_index = 1
 texture_filter = 1
 rotation = 1.5708
-texture = ExtResource("2_hq0j8")
+texture = ExtResource("2_uulch")
 
 [node name="Shape" type="CollisionShape2D" parent="."]
 scale = Vector2(5.14966, 2.59954)
 shape = SubResource("RectangleShape2D_61cqw")
 
 [node name="Hit Box" type="Area2D" parent="."]
-z_index = 2
 scale = Vector2(0.804573, 0.406147)
 collision_layer = 2
 
@@ -36,15 +35,16 @@ scale = Vector2(1.00002, 1.00002)
 shape = SubResource("RectangleShape2D_hq0j8")
 
 [node name="Barrel1" type="Sprite2D" parent="."]
-z_index = 3
+z_index = 2
 texture_filter = 1
-position = Vector2(-11.0234, -0.0078125)
+position = Vector2(-12.1931, -0.0119371)
 rotation = 1.5708
 scale = Vector2(1.00236, 1.0477)
 texture = ExtResource("3_gcekf")
-offset = Vector2(0.00781915, -26.9634)
+offset = Vector2(0.0119333, -27.1253)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
 z_index = 1
 position = Vector2(-11.0234, -0.0078125)
 rotation = 1.5708
@@ -61,5 +61,13 @@ position = Vector2(-48, 22)
 
 [node name="Line2D" parent="TrailPos2" instance=ExtResource("4_uulch")]
 
-[connection signal="area_entered" from="Hit Box" to="." method="_on_hit_box_area_entered"]
-[connection signal="area_exited" from="Hit Box" to="." method="_on_hit_box_area_exited"]
+[node name="Barrel" type="Area2D" parent="."]
+visible = false
+z_index = 1
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Barrel"]
+z_index = 1
+position = Vector2(-11.531, -0.00994032)
+rotation = 1.5708
+scale = Vector2(1.27476, 1.06653)
+polygon = PackedVector2Array(4.00782, -90.9634, -4.99218, -90.9634, -4.99218, -35.1634, -22.4922, -24.9634, -22.9922, -0.763405, -19.9922, 32.2366, -19.9922, 37.0366, 19.8078, 37.0366, 23.0078, 4.4366, 23.0078, -25.3634, 8.60782, -33.9634, 6.50782, -33.9634, 4.50782, -40.9634)

@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dx8pctw0t5kl1"]
+[gd_scene load_steps=4 format=3 uid="uid://dx8pctw0t5kl1"]
 
 [ext_resource type="Script" uid="uid://ceq1ccbx5utp1" path="res://assets/scripts/dev_car1.gd" id="1_tx3ax"]
 [ext_resource type="Texture2D" uid="uid://cbwgkd833hs48" path="res://assets/media/devcar/devCar.png" id="2_tx3ax"]
-[ext_resource type="PackedScene" uid="uid://vexikfxladr6" path="res://assets/scenes/trail.tscn" id="3_gl4ad"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61cqw"]
 size = Vector2(16.7001, 17.6954)
@@ -22,23 +21,3 @@ texture = ExtResource("2_tx3ax")
 position = Vector2(0, -2.47911e-05)
 scale = Vector2(5.14966, 2.59954)
 shape = SubResource("RectangleShape2D_61cqw")
-
-[node name="TrailPos1" type="Marker2D" parent="."]
-position = Vector2(-32, -22)
-
-[node name="Line2D" parent="TrailPos1" instance=ExtResource("3_gl4ad")]
-
-[node name="TrailPos2" type="Marker2D" parent="."]
-position = Vector2(-32, 22)
-
-[node name="Line2D" parent="TrailPos2" instance=ExtResource("3_gl4ad")]
-
-[node name="TrailPos3" type="Marker2D" parent="."]
-position = Vector2(27, -22)
-
-[node name="Line2D" parent="TrailPos3" instance=ExtResource("3_gl4ad")]
-
-[node name="TrailPos4" type="Marker2D" parent="."]
-position = Vector2(27, 22)
-
-[node name="Line2D" parent="TrailPos4" instance=ExtResource("3_gl4ad")]

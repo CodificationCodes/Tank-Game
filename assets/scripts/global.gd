@@ -19,6 +19,8 @@ var tank1IDselected : int = 1
 var tank2IDselected : int = 1
 var tank1health : int = 5
 var tank2health : int = 5
+var p1money : int
+var p2money : int
 
 func _ready():
 	debug_loop()
@@ -26,7 +28,7 @@ func _ready():
 func debug_loop() -> void:
 	pass
 #	while true:
-#		print("Tank1ID: " + str(tank1IDselected))
-#		print("Tank2ID: " + str(tank2IDselected))
+#		print("Tank1ID: " + str(tank1health))
+#		print("Tank2ID: " + str(tank1health))
 #		print(" ")
 #		await get_tree().create_timer(2.0).timeout

@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dtin1fng8lxkt"]
-
-[ext_resource type="PackedScene" uid="uid://8427c4kuqt5f" path="res://assets/scenes/abrams1.tscn" id="1_ng43a"]
-
-[node name="Tank 1" instance=ExtResource("1_ng43a")]

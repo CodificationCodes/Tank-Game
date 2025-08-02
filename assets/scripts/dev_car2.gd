@@ -34,7 +34,10 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("tank2fire") and can_fire:
 		can_fire = false
 		fire()
-
+		
+	if Global.tank1health == 0:
+		queue_free()
+		
 	move_and_slide()
 
 # Instatiate and rotate shell scene

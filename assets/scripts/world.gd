@@ -33,6 +33,7 @@ func _ready():
 	else:
 		var tank1 = devcar1.instantiate()
 		add_child(tank1)
+		Global.tank1health = 1
 		tank1.rotation = deg_to_rad(90)
 		tank1.position = Vector2(53, 90)
 		
@@ -47,6 +48,7 @@ func _ready():
 	else:
 		var tank2 = devcar2.instantiate()
 		add_child(tank2)
+		Global.tank2health = 1
 		tank2.rotation = deg_to_rad(270)
 		tank2.position = Vector2(1138, 590)
 

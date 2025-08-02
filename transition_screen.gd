@@ -12,9 +12,21 @@
 #MIT license (See README.md for info)
 #Copyright (c) 2025 Spike Forsythe ❤️
 
-extends Control
+extends CanvasLayer
 
-var tank1selection = 1
-var tank2selection = 1
-var tank1currentframe = 0
-var tank2currentframe = 0
+signal transitioned
+
+func _ready():
+	transition()
+	
+func transition():
+	$AnimationPlayer.play("fade_to_black")
+	print("Fading to black")
+
+func _on_animation_player_animation_finished(animName):
+	if animName == "fade_to_black":
+		print("Emit signal transitioned")
+		emit_signal("transitioned")
+		$AnimationPlayer.play("fade_to_normal")
+	if animName == "fade_to_normal":
+		print("Finished fading")

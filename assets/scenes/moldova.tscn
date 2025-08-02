@@ -166,6 +166,7 @@ outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 
 [node name="World Collection" type="Node2D"]
+position = Vector2(0, -1)
 script = ExtResource("1_b7dy1")
 
 [node name="Ground Texture" type="TextureRect" parent="."]
@@ -175,7 +176,7 @@ offset_bottom = 675.0
 size_flags_horizontal = 4
 texture = ExtResource("4_b7dy1")
 
-[node name="Collisions" type="StaticBody2D" parent="."]
+[node name="Collisions" type="StaticBody2D" parent="." groups=["Walls"]]
 scale = Vector2(1.00068, 1.00068)
 collision_layer = 3
 collision_mask = 3

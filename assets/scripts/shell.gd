@@ -27,8 +27,11 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Tank1"):
 		Global.tank1health -= 1
+		queue_free();;
 		print("Tank1Health: " + str(Global.tank1health))
-	else:
+	elif body.is_in_group("Tank2"):
 		Global.tank2health -= 1
-		print("Tank2Health: " + str(Global.tank2health)) 
-	queue_free()
+		queue_free()
+		print("Tank2Health: " + str(Global.tank2health))  
+	else:
+		queue_free()
