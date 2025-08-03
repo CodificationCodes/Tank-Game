@@ -307,9 +307,18 @@ theme_override_font_sizes/normal_font_size = 42
 text = "null"
 scroll_active = false
 
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 894.0
+offset_top = 63.0
+offset_right = 1130.0
+offset_bottom = 146.0
+text = "add p1 moneys"
+
 [connection signal="pressed" from="Buttons/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Buttons/Begin" to="." method="_on_begin_pressed"]
 [connection signal="pressed" from="Buttons/P1VehicleUp" to="." method="_on_p_1_vehicle_up_pressed"]
 [connection signal="pressed" from="Buttons/P1VehicleDown" to="." method="_on_p_1_vehicle_down_pressed"]
 [connection signal="pressed" from="Buttons/P2VehicleUp" to="." method="_on_p_2_vehicle_up_pressed"]
 [connection signal="pressed" from="Buttons/P2VehicleDown" to="." method="_on_p_2_vehicle_down_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

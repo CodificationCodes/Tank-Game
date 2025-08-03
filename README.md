@@ -9,9 +9,9 @@ Tank Game is a collaboration project between Prop Codification. and Sizeablebeet
 ## Features
 
 - Fun and interactive tank physics
-- Up to 4 different types of tanks: M1 Abrams, T-72, M4 Sherman and Tiger 2.
+- Up to 4 different types of tanks: M1 Abrams, T-90, M4 Sherman and Panther 1.
 - 3 different maps
-- Odessa-Moldova, Ukraine, Fields, Outer Berlin, and maybe Desert (Would have been Iraq, but I had some second thoughts). These should be playable in all historical settings.
+- Odessa-Moldova, Ukraine, Fields, Outer Berlin, and maybe Desert
 - Player vs AI gamemode
 - Smooth and fun to navigate main menu
 - Sound effects in all scenes
