@@ -1,6 +1,8 @@
 
 # Tank Game
 
+![test](https://i.ibb.co/pY7hkvd/Mockup-up-by-Designer.png)
+
 Tank Game is a collaboration project between Prop Codification. and Sizeablebeet or C8 Studios. It is an arcade-style 1v1 party game in which two players fight for victory in the tanks of their choice. With each tank harnessing unique abilities, Tank game allows for replayability, simple yet powerful controls, and fun to grasp gameplay mechanics.
 
 
