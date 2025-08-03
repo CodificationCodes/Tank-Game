@@ -19,6 +19,9 @@ extends CharacterBody2D
 @export var lerp_weight := 0.1
 var can_fire = true
 
+func _ready():
+	Global.tank2health = 1
+
 func _physics_process(delta):
 	
 	# Rotation input

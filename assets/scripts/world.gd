@@ -13,23 +13,31 @@
 #Copyright (c) 2025 Spike Forsythe ❤️
 
 extends Node2D
+
 @onready var label_node = $Tank1Nametag
+@onready var transition_screen = $Transition/TransitionScreen
 @export var abrams1 = preload("res://assets/scenes/abrams1.tscn")
 @export var abrams2 = preload("res://assets/scenes/abrams2.tscn")
 @export var devcar1 = preload("res://assets/scenes/devCar1.tscn") 
 @export var devcar2 = preload("res://assets/scenes/devCar2.tscn") 
+@export var t90_1 = preload("res://assets/scenes/t90_1.tscn") 
+@export var t90_2 = preload("res://assets/scenes/t90_2.tscn") 
 
 func _ready():
-	#Line 24-26 Insantiates the players selected tank as tank1
+	transition_screen.visible = true
+	transition_screen.transition_finished.connect(_on_transition_finished)
+	transition_screen.fade_in()
+	
 	if Global.tank1IDselected == 1:
 		var tank1 = abrams1.instantiate()
 		add_child(tank1)
-		#Sets the tank to the correct position
 		tank1.rotation = deg_to_rad(90)
 		tank1.position = Vector2(53, 90)
-		
 	elif Global.tank1IDselected == 2:
-		pass
+		var tank1 = t90_1.instantiate()
+		add_child(tank1)
+		tank1.rotation = deg_to_rad(90)
+		tank1.position = Vector2(53,90)
 	else:
 		var tank1 = devcar1.instantiate()
 		add_child(tank1)
@@ -42,9 +50,11 @@ func _ready():
 		add_child(tank2)
 		tank2.rotation = deg_to_rad(270)
 		tank2.position = Vector2(1138, 590)
-		
 	elif Global.tank2IDselected == 2:
-		pass
+		var tank2 = t90_2.instantiate()
+		add_child(tank2)
+		tank2.rotation = deg_to_rad(270)
+		tank2.position = Vector2(1138, 590)
 	else:
 		var tank2 = devcar2.instantiate()
 		add_child(tank2)
@@ -52,10 +62,5 @@ func _ready():
 		tank2.rotation = deg_to_rad(270)
 		tank2.position = Vector2(1138, 590)
 
-
-#func _process(delta):
-#	# Move nametag to the tank
-#	if label_node and tank_node:
-#		label_node.global_position = tank_node.global_position + Vector2(-23, -50)
-#		
-#	label_node.text = Global.playerName
+func _on_transition_finished():
+	transition_screen.visible = false

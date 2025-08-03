@@ -11,9 +11,23 @@
 #
 #MIT license (See README.md for info)
 #Copyright (c) 2025 Spike Forsythe ❤️
+#Script adapted from garrettrandolph @ DevWorm
 
-extends Control
- 
-func _on_button_pressed() -> void:
-	moneyManager.load_data()
-	get_tree().change_scene_to_file("res://assets/scenes/newmenu.tscn")
+extends Node
+
+var save_path = "user://money.save"
+
+func save():
+	var file = FileAccess.open(save_path, FileAccess.WRITE)
+	file.store_var(Global.p1money)
+	file.store_var(Global.p2money)
+	
+func load_data():
+	if FileAccess.file_exists(save_path):
+		var file = FileAccess.open(save_path, FileAccess.READ)
+		Global.p1money = file.get_var(Global.p1money)
+		Global.p2money = file.get_var(Global.p2money)
+	else:
+		print("data failed to save")
+		Global.p1money = 0
+		Global.p2money = 0 

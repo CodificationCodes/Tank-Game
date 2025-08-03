@@ -17,8 +17,8 @@ extends Node
 var playerName
 var tank1IDselected : int = 1
 var tank2IDselected : int = 1
-var tank1health : int = 5
-var tank2health : int = 5
+var tank1health : int
+var tank2health : int
 var p1money : int
 var p2money : int
 

@@ -29,6 +29,9 @@ func get_local_angle(global_angle: float) -> float:
 
 var touching_wall = false
 
+func _ready():
+	Global.tank2health = 5
+
 func _physics_process(delta):
 	#q/e barrel rotation
 	var rotation_input = 0

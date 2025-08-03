@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://ba0bvw3rev3ba"]
+
+[ext_resource type="Script" uid="uid://bh0qrsmhensq6" path="res://assets/scripts/t90_1.gd" id="1_ecs36"]
+[ext_resource type="Texture2D" uid="uid://dv7k8ar2n2pmn" path="res://assets/media/t90/t90body.png" id="2_u174s"]
+[ext_resource type="Texture2D" uid="uid://dftjo1i1o1a6b" path="res://assets/media/t90/t90turret.png" id="3_f8yyg"]
+[ext_resource type="PackedScene" uid="uid://vexikfxladr6" path="res://assets/scenes/trail.tscn" id="4_jttka"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_61cqw"]
+size = Vector2(16.7001, 17.6954)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hq0j8"]
+size = Vector2(128, 128)
+
+[node name="Tank1" type="CharacterBody2D" groups=["Tank1"]]
+script = ExtResource("1_ecs36")
+
+[node name="LookAt" type="Node2D" parent="."]
+
+[node name="Hull" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+rotation = 1.5708
+texture = ExtResource("2_u174s")
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+scale = Vector2(5.14966, 2.59954)
+shape = SubResource("RectangleShape2D_61cqw")
+
+[node name="Hit Box" type="Area2D" parent="."]
+scale = Vector2(0.804573, 0.406147)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hit Box"]
+scale = Vector2(1.00002, 1.00002)
+shape = SubResource("RectangleShape2D_hq0j8")
+
+[node name="Barrel1" type="Sprite2D" parent="."]
+z_index = 2
+texture_filter = 1
+position = Vector2(7.21878, -0.0398159)
+rotation = 1.5708
+scale = Vector2(1.00236, 1.0477)
+texture = ExtResource("3_f8yyg")
+offset = Vector2(0.0516624, -25.0075)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(-11.0234, -0.0078125)
+rotation = 1.5708
+scale = Vector2(1.00236, 1.0477)
+polygon = PackedVector2Array(4.00782, -90.9634, -4.99218, -90.9634, -4.99218, -35.1634, -22.4922, -24.9634, -22.9922, -0.763405, -19.9922, 32.2366, -19.9922, 37.0366, 19.8078, 37.0366, 23.0078, 4.4366, 23.0078, -25.3634, 8.60782, -33.9634, 6.50782, -33.9634, 4.50782, -40.9634)
+
+[node name="TrailPos1" type="Marker2D" parent="."]
+position = Vector2(-39, -22)
+
+[node name="Line2D" parent="TrailPos1" instance=ExtResource("4_jttka")]
+
+[node name="TrailPos2" type="Marker2D" parent="."]
+position = Vector2(-39, 22)
+
+[node name="Line2D" parent="TrailPos2" instance=ExtResource("4_jttka")]
+
+[node name="Barrel" type="Area2D" parent="."]
+visible = false
+z_index = 1
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Barrel"]
+z_index = 1
+position = Vector2(-11.531, -0.00994032)
+rotation = 1.5708
+scale = Vector2(1.27476, 1.06653)
+polygon = PackedVector2Array(4.00782, -90.9634, -4.99218, -90.9634, -4.99218, -35.1634, -22.4922, -24.9634, -22.9922, -0.763405, -19.9922, 32.2366, -19.9922, 37.0366, 19.8078, 37.0366, 23.0078, 4.4366, 23.0078, -25.3634, 8.60782, -33.9634, 6.50782, -33.9634, 4.50782, -40.9634)

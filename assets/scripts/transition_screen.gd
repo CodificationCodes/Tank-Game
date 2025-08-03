@@ -14,19 +14,22 @@
 
 extends CanvasLayer
 
-signal transitioned
+signal transition_halfway  # Emitted when screen is fully black
+signal transition_finished # Emitted when fade back is complete
+@export var black_screen_duration := 1  # Change this to adjust how long screen is fully black for
 
-func _ready():
-	transition()
-	
-func transition():
+func fade_out():
+	visible = true
 	$AnimationPlayer.play("fade_to_black")
-	print("Fading to black")
 
-func _on_animation_player_animation_finished(animName):
-	if animName == "fade_to_black":
-		print("Emit signal transitioned")
-		emit_signal("transitioned")
-		$AnimationPlayer.play("fade_to_normal")
-	if animName == "fade_to_normal":
-		print("Finished fading")
+func fade_in():
+	visible = true
+	$AnimationPlayer.play("fade_to_normal")
+
+func _on_animation_player_animation_finished(anim_name):
+	if anim_name == "fade_to_black":
+		await get_tree().create_timer(black_screen_duration).timeout 
+		emit_signal("transition_halfway")
+	elif anim_name == "fade_to_normal":
+		emit_signal("transition_finished")
+		visible = false

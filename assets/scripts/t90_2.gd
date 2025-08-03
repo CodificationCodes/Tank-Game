@@ -14,7 +14,7 @@
 
 extends CharacterBody2D
 
-@export var speed := 110.0
+@export var speed := 95.3
 @export var rotation_speed := 1.0  #radians per second
 @export var lerp_weight := 0.1
 @export var barrel_rotation_speed: float = 2.0
@@ -30,15 +30,15 @@ func get_local_angle(global_angle: float) -> float:
 var touching_wall = false
 
 func _ready():
-	Global.tank1health = 5
+	Global.tank2health = 4
 
 func _physics_process(delta):
 	#q/e barrel rotation
 	var rotation_input = 0
 	
-	if Input.is_action_pressed("tank1barleft"):
+	if Input.is_action_pressed("tank2barleft"):
 		rotation_input -= 1
-	if Input.is_action_pressed("tank1barright"):
+	if Input.is_action_pressed("tank2barright"):
 		rotation_input += 1
 		
 	barrel.rotation += rotation_input * rotation_speed * delta
@@ -46,21 +46,21 @@ func _physics_process(delta):
 	barcolshape.rotation += rotation_input * rotation_speed * delta
 	
 	#Rotation input 
-	var rotate_input := Input.get_axis("tank1left", "tank1right")
+	var rotate_input := Input.get_axis("tank2left", "tank2right")
 	rotation += rotate_input * rotation_speed * delta
 	
 	#Forawrd/back input
-	var move_input := Input.get_axis("tank1down", "tank1up")
+	var move_input := Input.get_axis("tank2down", "tank2up")
 	var direction := Vector2(cos(rotation), sin(rotation))
 	velocity = velocity.lerp(direction * move_input * speed, lerp_weight)
 	
-	if Input.is_action_just_pressed("tank1fire") and can_fire:
+	if Input.is_action_just_pressed("tank2fire") and can_fire:
 		can_fire = false
 		fire()
 		await get_tree().create_timer(2).timeout
 		can_fire = true
 		
-	if Global.tank1health == 0:
+	if Global.tank2health == 0:
 		queue_free()
 		
 	move_and_slide()

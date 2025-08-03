@@ -1,7 +1,8 @@
-[gd_scene load_steps=55 format=3 uid="uid://bol07ursldr83"]
+[gd_scene load_steps=56 format=3 uid="uid://bol07ursldr83"]
 
 [ext_resource type="Script" uid="uid://blx44v1i2e3q6" path="res://assets/scripts/world.gd" id="1_b7dy1"]
 [ext_resource type="Texture2D" uid="uid://dprfttem2p01p" path="res://assets/media/moldova/Moldova.png" id="4_b7dy1"]
+[ext_resource type="PackedScene" uid="uid://bav4mjk06uod6" path="res://assets/scenes/transition_screen.tscn" id="4_iayio"]
 [ext_resource type="FontFile" uid="uid://blpsjmcwfqmth" path="res://assets/Panzer.ttf" id="5_v8n5k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0juu"]
@@ -418,3 +419,12 @@ pivot_offset = Vector2(29, 13)
 text = "names"
 label_settings = SubResource("LabelSettings_vu0c7")
 horizontal_alignment = 1
+
+[node name="Transition" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1200.0
+offset_bottom = 675.0
+mouse_filter = 2
+
+[node name="TransitionScreen" parent="Transition" instance=ExtResource("4_iayio")]

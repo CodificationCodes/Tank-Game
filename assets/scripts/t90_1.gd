@@ -14,7 +14,7 @@
 
 extends CharacterBody2D
 
-@export var speed := 110.0
+@export var speed := 95.3
 @export var rotation_speed := 1.0  #radians per second
 @export var lerp_weight := 0.1
 @export var barrel_rotation_speed: float = 2.0
@@ -30,7 +30,7 @@ func get_local_angle(global_angle: float) -> float:
 var touching_wall = false
 
 func _ready():
-	Global.tank1health = 5
+	Global.tank1health = 4
 
 func _physics_process(delta):
 	#q/e barrel rotation
