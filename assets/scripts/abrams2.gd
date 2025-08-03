@@ -21,6 +21,8 @@ extends CharacterBody2D
 @onready var barrel = $Barrel1
 @onready var lookat = $LookAt
 @onready var barcolshape: CollisionPolygon2D = $CollisionPolygon2D
+@onready var tmark1: Line2D = $TrailPos1/Line2D
+@onready var tmark2: Line2D = $TrailPos2/Line2D
 var bullet_scene = load("res://assets/scenes/shell.tscn") as PackedScene
 var can_fire = true
 
@@ -31,10 +33,18 @@ var touching_wall = false
 
 func _ready():
 	Global.tank2health = 5
+	# Because we teleport the tank, a line gets drawn across the map for the tyre marks, so to begin we hide it (see line 45)
+	tmark1.hide()
+	tmark2.hide()
 
 func _physics_process(delta):
 	#q/e barrel rotation
 	var rotation_input = 0
+	
+	if Input.is_action_pressed("tank2up"):
+		# This than makes the tyre marks show
+		tmark1.show()
+		tmark2.show()
 	
 	if Input.is_action_pressed("tank2barleft"):
 		rotation_input -= 1

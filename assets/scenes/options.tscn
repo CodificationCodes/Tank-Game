@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmdn4l7xibu57"]
+
+[ext_resource type="Script" uid="uid://b7ry2ktgyewnb" path="res://assets/scripts/options.gd" id="1_26tx4"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="fullscrene" type="Button" parent="."]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 164.0
+offset_right = 724.0
+offset_bottom = 372.0
+text = "Toggle Fullscreen"
+script = ExtResource("1_26tx4")
+
+[connection signal="pressed" from="fullscrene" to="fullscrene" method="_on_fullscreen_pressed"]

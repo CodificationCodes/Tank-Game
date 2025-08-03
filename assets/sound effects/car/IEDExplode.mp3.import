@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bxyf6k1r7ttmd"
+path="res://.godot/imported/IEDExplode.mp3-378e61c2228e914aa965d44bbac4766d.mp3str"
+
+[deps]
+
+source_file="res://assets/sound effects/car/IEDExplode.mp3"
+dest_files=["res://.godot/imported/IEDExplode.mp3-378e61c2228e914aa965d44bbac4766d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

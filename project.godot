@@ -35,7 +35,8 @@ project/assembly_name="Tank game"
 folder_colors={
 "res://assets/media/": "blue",
 "res://assets/scenes/": "red",
-"res://assets/scripts/": "green"
+"res://assets/scripts/": "green",
+"res://assets/sound effects/": "purple"
 }
 
 [global_group]
@@ -43,6 +44,7 @@ folder_colors={
 Walls=""
 Tank1=""
 Tank2=""
+ExplosionRadius=""
 
 [input]
 

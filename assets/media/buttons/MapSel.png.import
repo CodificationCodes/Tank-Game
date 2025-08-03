@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2kk1cqm8jqt8"
-path="res://.godot/imported/TankSel.png-29f685aeb0b754d7bf988d4f508ff219.ctex"
+path="res://.godot/imported/MapSel.png-b9ad9fd4c0286f121920439e4e8eb7c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/media/buttons/TankSel.png"
-dest_files=["res://.godot/imported/TankSel.png-29f685aeb0b754d7bf988d4f508ff219.ctex"]
+source_file="res://assets/media/buttons/MapSel.png"
+dest_files=["res://.godot/imported/MapSel.png-b9ad9fd4c0286f121920439e4e8eb7c4.ctex"]
 
 [params]
 

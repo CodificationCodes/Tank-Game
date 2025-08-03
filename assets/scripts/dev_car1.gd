@@ -17,6 +17,8 @@ extends CharacterBody2D
 @export var speed := 220
 @export var rotation_speed := 2.0
 @export var lerp_weight := 0.1
+@onready var NokiaExplode: AudioStreamPlayer = $AudioStreamPlayer
+@onready var dev_car: CharacterBody2D = $"."
 var can_fire = true
 
 func _ready():
@@ -43,12 +45,19 @@ func _physics_process(delta):
 		
 	move_and_slide()
 
-# Instatiate and rotate shell scene
+# Plays IED explosion sound effect and hides, pauses, and removes the car
 func fire():
-	pass
-#	if bullet_scene:
-#		#print(rotation_degrees)
-#		var bullet = bullet_scene.instantiate()
-#		bullet.global_position = barrel.global_position
-#		bullet.global_rotation = barrel.global_rotation
-#		get_parent().add_child(bullet)
+	NokiaExplode.play()
+	await get_tree().create_timer(3.2).timeout
+	
+	dev_car.hide()
+	
+	var explosion_area = $ExplosionRadius
+	var bodies = explosion_area.get_overlapping_bodies()
+	
+	for body in bodies:
+		if body.is_in_group("Tank2"):
+			body.queue_free()
+	
+	await get_tree().create_timer(7.0).timeout
+	queue_free()

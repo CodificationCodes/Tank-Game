@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://bm82kc7vftxf7"]
+[gd_scene load_steps=27 format=4 uid="uid://bm82kc7vftxf7"]
 
 [ext_resource type="Script" uid="uid://d1et57o75qc08" path="res://assets/scripts/MainMenu.gd" id="1_0u3re"]
 [ext_resource type="Texture2D" uid="uid://cqmo3caijsy2i" path="res://assets/media/menus/MainMenu.png" id="1_yidlm"]
@@ -10,8 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://cwxjdraqgnm1b" path="res://assets/media/buttons/Credits2.png" id="7_rp8oe"]
 [ext_resource type="Texture2D" uid="uid://deltvxs02j8mh" path="res://assets/media/buttons/Begin1.png" id="8_0u3re"]
 [ext_resource type="Texture2D" uid="uid://c3tveva026hqp" path="res://assets/media/buttons/Begin2.png" id="9_kt0lu"]
-[ext_resource type="Texture2D" uid="uid://c2kk1cqm8jqt8" path="res://assets/media/buttons/TankSel.png" id="10_1ddae"]
+[ext_resource type="Texture2D" uid="uid://c2kk1cqm8jqt8" path="res://assets/media/buttons/MapSel.png" id="10_1ddae"]
 [ext_resource type="Texture2D" uid="uid://dj4utmfmbg5xs" path="res://assets/media/buttons/VehicleSel.png" id="12_kt0lu"]
+[ext_resource type="Texture2D" uid="uid://5aexe2i3s1v3" path="res://assets/media/buttons/VehicleSelHov.png" id="13_d62nu"]
 [ext_resource type="Texture2D" uid="uid://bek0yasultr7k" path="res://assets/media/abrams/AbramsFull.png" id="13_kt0lu"]
 [ext_resource type="Texture2D" uid="uid://b7lrixyiofal7" path="res://assets/media/t90/t90full.png" id="14_lcy4l"]
 [ext_resource type="Texture2D" uid="uid://cbwgkd833hs48" path="res://assets/media/devcar/devCar.png" id="15_lkbtv"]
@@ -26,6 +27,9 @@ load_path = "res://.godot/imported/VehicleSel.png-355370564788bbe14ac76ebd3c49e0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fh8go"]
 load_path = "res://.godot/imported/VehicleSel.png-355370564788bbe14ac76ebd3c49e0f6.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d6alf"]
+load_path = "res://.godot/imported/VehicleSelHov.png-d6b2f007fbf5c5ffbb3efb069b572e55.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d62nu"]
 load_path = "res://.godot/imported/VehicleSel.png-355370564788bbe14ac76ebd3c49e0f6.ctex"
@@ -224,6 +228,7 @@ offset_right = 907.0
 offset_bottom = 499.0
 scale = Vector2(0.333, 0.333)
 texture_normal = ExtResource("12_kt0lu")
+texture_hover = ExtResource("13_d62nu")
 
 [node name="P1VehicleDown" type="TextureButton" parent="Buttons"]
 layout_mode = 0
@@ -233,6 +238,7 @@ offset_right = 907.0
 offset_bottom = 563.0
 scale = Vector2(0.333, 0.333)
 texture_normal = SubResource("CompressedTexture2D_lcy4l")
+texture_hover = ExtResource("13_d62nu")
 flip_v = true
 
 [node name="P2VehicleUp" type="TextureButton" parent="Buttons"]
@@ -243,6 +249,7 @@ offset_right = 978.0
 offset_bottom = 501.0
 scale = Vector2(0.333, 0.333)
 texture_normal = SubResource("CompressedTexture2D_fh8go")
+texture_hover = SubResource("CompressedTexture2D_d6alf")
 
 [node name="P2VehicleDown" type="TextureButton" parent="Buttons"]
 layout_mode = 0
@@ -252,6 +259,7 @@ offset_right = 978.0
 offset_bottom = 562.995
 scale = Vector2(0.333, 0.333)
 texture_normal = SubResource("CompressedTexture2D_d62nu")
+texture_hover = SubResource("CompressedTexture2D_d6alf")
 flip_v = true
 
 [node name="Tank1VisualRef" type="AnimatedSprite2D" parent="."]
@@ -307,18 +315,10 @@ theme_override_font_sizes/normal_font_size = 42
 text = "null"
 scroll_active = false
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 894.0
-offset_top = 63.0
-offset_right = 1130.0
-offset_bottom = 146.0
-text = "add p1 moneys"
-
+[connection signal="pressed" from="Buttons/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Buttons/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Buttons/Begin" to="." method="_on_begin_pressed"]
 [connection signal="pressed" from="Buttons/P1VehicleUp" to="." method="_on_p_1_vehicle_up_pressed"]
 [connection signal="pressed" from="Buttons/P1VehicleDown" to="." method="_on_p_1_vehicle_down_pressed"]
 [connection signal="pressed" from="Buttons/P2VehicleUp" to="." method="_on_p_2_vehicle_up_pressed"]
 [connection signal="pressed" from="Buttons/P2VehicleDown" to="." method="_on_p_2_vehicle_down_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

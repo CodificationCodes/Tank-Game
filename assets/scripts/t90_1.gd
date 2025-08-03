@@ -18,6 +18,8 @@ extends CharacterBody2D
 @export var rotation_speed := 1.0  #radians per second
 @export var lerp_weight := 0.1
 @export var barrel_rotation_speed: float = 2.0
+@onready var tmark1: Line2D = $TrailPos1/Line2D
+@onready var tmark2: Line2D = $TrailPos2/Line2D
 @onready var barrel = $Barrel1
 @onready var lookat = $LookAt
 @onready var barcolshape: CollisionPolygon2D = $CollisionPolygon2D
@@ -31,10 +33,17 @@ var touching_wall = false
 
 func _ready():
 	Global.tank1health = 4
+	tmark1.hide()
+	tmark2.hide()
 
 func _physics_process(delta):
 	#q/e barrel rotation
 	var rotation_input = 0
+	
+	if Input.is_action_pressed("tank1up"):
+		# This than makes the tyre marks show
+		tmark1.show()
+		tmark2.show()
 	
 	if Input.is_action_pressed("tank1barleft"):
 		rotation_input -= 1

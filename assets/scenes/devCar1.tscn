@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dx8pctw0t5kl1"]
+[gd_scene load_steps=6 format=3 uid="uid://dx8pctw0t5kl1"]
 
 [ext_resource type="Script" uid="uid://ceq1ccbx5utp1" path="res://assets/scripts/dev_car1.gd" id="1_tx3ax"]
 [ext_resource type="Texture2D" uid="uid://cbwgkd833hs48" path="res://assets/media/devcar/devCar.png" id="2_tx3ax"]
+[ext_resource type="AudioStream" uid="uid://bxyf6k1r7ttmd" path="res://assets/sound effects/car/IEDExplode.mp3" id="3_gl4ad"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61cqw"]
 size = Vector2(16.7001, 17.6954)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gl4ad"]
+radius = 98.0
 
 [node name="DevCar" type="CharacterBody2D" groups=["Tank1"]]
 script = ExtResource("1_tx3ax")
@@ -21,3 +25,13 @@ texture = ExtResource("2_tx3ax")
 position = Vector2(0, -2.47911e-05)
 scale = Vector2(5.14966, 2.59954)
 shape = SubResource("RectangleShape2D_61cqw")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_gl4ad")
+
+[node name="ExplosionRadius" type="Area2D" parent="." groups=["ExplosionRadius"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExplosionRadius"]
+position = Vector2(34, -7)
+shape = SubResource("CircleShape2D_gl4ad")
+debug_color = Color(1, 0.0050764, 0.0621274, 0.42)
