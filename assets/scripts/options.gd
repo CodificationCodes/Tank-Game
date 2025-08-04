@@ -12,7 +12,7 @@
 #MIT license (See README.md for info)
 #Copyright (c) 2025 Spike Forsythe ❤️
 
-extends Button
+extends Control
 
 func _on_fullscreen_pressed() -> void:
 	# Toggle fullscreen in a script, like from a button press or input
@@ -20,3 +20,7 @@ func _on_fullscreen_pressed() -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+
+
+func _on_return_pressed() -> void:
+	get_tree().change_scene_to_file("res://assets/scenes/newmenu.tscn")

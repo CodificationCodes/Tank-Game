@@ -11,21 +11,23 @@
 #
 #MIT license (See README.md for info)
 #Copyright (c) 2025 Spike Forsythe ❤️
+#Script adapted from garrettrandolph @ DevWorm
 
-extends Sprite2D
+extends Node
 
-@export var min_angle: float = -30 #Min rotation angle
-@export var max_angle: float = 12  #Max rotation angle
+var save_path = "user://saveData.save"
 
-func _process(delta):
-	var mouse_pos = get_global_mouse_position()
-	var direction = (mouse_pos - global_position).normalized()
-	var target_rotation = direction.angle()
+func save():
+	var file = FileAccess.open(save_path, FileAccess.WRITE)
+	file.store_var(Global.p1money)
+	file.store_var(Global.p2money)
 	
-	#Radians to degrees
-	var target_rotation_degrees = rad_to_deg(target_rotation)
-
-	#Clamp rotation
-	target_rotation_degrees = clamp(target_rotation_degrees, min_angle, max_angle)
-
-	rotation = deg_to_rad(target_rotation_degrees)
+func load_data():
+	if FileAccess.file_exists(save_path):
+		var file = FileAccess.open(save_path, FileAccess.READ)
+		Global.p1money = file.get_var(Global.p1money)
+		Global.p2money = file.get_var(Global.p2money)
+	else:
+		print("data failed to save")
+		Global.p1money = 0
+		Global.p2money = 0 

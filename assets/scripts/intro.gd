@@ -15,5 +15,6 @@
 extends Control
  
 func _on_button_pressed() -> void:
-	moneyManager.load_data()
+	saveManager.load_data()
+	
 	get_tree().change_scene_to_file("res://assets/scenes/newmenu.tscn")

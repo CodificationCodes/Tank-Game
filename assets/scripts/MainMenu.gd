@@ -72,11 +72,11 @@ func _on_p_2_vehicle_down_pressed() -> void:
 		tank2currentframe -= 1
 
 func _on_quit_pressed() -> void:
-	moneyManager.save()
+	saveManager.save()
 	get_tree().quit()
 
 func _on_begin_pressed() -> void:
-	moneyManager.save()
+	saveManager.save()
 	transition_screen.fade_out()
 
 func _on_settings_pressed() -> void:

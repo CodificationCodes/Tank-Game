@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dmdn4l7xibu57"]
 
-[ext_resource type="Script" uid="uid://b7ry2ktgyewnb" path="res://assets/scripts/options.gd" id="1_26tx4"]
+[ext_resource type="Script" uid="uid://717hebrhux02" path="res://assets/scripts/options.gd" id="1_26tx4"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -9,14 +9,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_26tx4")
 
 [node name="fullscrene" type="Button" parent="."]
 layout_mode = 0
-offset_left = 285.0
-offset_top = 164.0
-offset_right = 724.0
-offset_bottom = 372.0
+offset_left = 53.0
+offset_top = 32.0
+offset_right = 492.0
+offset_bottom = 240.0
 text = "Toggle Fullscreen"
-script = ExtResource("1_26tx4")
 
-[connection signal="pressed" from="fullscrene" to="fullscrene" method="_on_fullscreen_pressed"]
+[node name="Return" type="Button" parent="."]
+layout_mode = 0
+offset_left = 992.0
+offset_top = 39.0
+offset_right = 1159.0
+offset_bottom = 70.0
+text = "go back to the menu"
+
+[connection signal="pressed" from="fullscrene" to="." method="_on_fullscreen_pressed"]
+[connection signal="pressed" from="Return" to="." method="_on_return_pressed"]

@@ -18,7 +18,7 @@ boot_splash/image="uid://jaoipydef22h"
 [autoload]
 
 Global="*res://assets/scripts/global.gd"
-moneyManager="*res://assets/scripts/money.gd"
+saveManager="*res://assets/scripts/savedata.gd"
 
 [display]
 
