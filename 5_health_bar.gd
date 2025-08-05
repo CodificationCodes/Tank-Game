@@ -13,7 +13,8 @@
 #Copyright (c) 2025 Spike Forsythe ❤️
 
 extends Control
- 
-func _on_button_pressed() -> void:
-	saveManager.load_data()
-	get_tree().change_scene_to_file("res://assets/scenes/newmenu.tscn")
+
+@onready var healthbar: AnimatedSprite2D = $healthbar
+
+func _physics_process(delta):
+	healthbar.frame = Global.tank1health

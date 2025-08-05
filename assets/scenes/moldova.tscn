@@ -1,8 +1,9 @@
-[gd_scene load_steps=56 format=3 uid="uid://bol07ursldr83"]
+[gd_scene load_steps=57 format=3 uid="uid://bol07ursldr83"]
 
 [ext_resource type="Script" uid="uid://blx44v1i2e3q6" path="res://assets/scripts/world.gd" id="1_b7dy1"]
 [ext_resource type="Texture2D" uid="uid://dprfttem2p01p" path="res://assets/media/moldova/Moldova.png" id="4_b7dy1"]
 [ext_resource type="PackedScene" uid="uid://bav4mjk06uod6" path="res://assets/scenes/transition_screen.tscn" id="4_iayio"]
+[ext_resource type="PackedScene" uid="uid://cia78e6fhlfkq" path="res://5HealthBar.tscn" id="5_b7dy1"]
 [ext_resource type="FontFile" uid="uid://blpsjmcwfqmth" path="res://assets/Panzer.ttf" id="5_v8n5k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0juu"]
@@ -167,7 +168,6 @@ outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 
 [node name="World Collection" type="Node2D"]
-position = Vector2(0, -1)
 script = ExtResource("1_b7dy1")
 
 [node name="Ground Texture" type="TextureRect" parent="."]
@@ -428,3 +428,11 @@ offset_bottom = 675.0
 mouse_filter = 2
 
 [node name="TransitionScreen" parent="Transition" instance=ExtResource("4_iayio")]
+visible = false
+
+[node name="Control" parent="." instance=ExtResource("5_b7dy1")]
+offset_left = 303.0
+offset_top = 55.0
+offset_right = 303.0
+offset_bottom = 55.0
+scale = Vector2(0.333, 0.333)
