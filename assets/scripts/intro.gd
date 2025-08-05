@@ -12,8 +12,11 @@
 #MIT license (See README.md for info)
 #Copyright (c) 2025 Spike Forsythe ❤️
 
-extends Control
- 
+extends Control 
+
 func _on_button_pressed() -> void:
 	saveManager.load_data()
-	get_tree().change_scene_to_file("res://assets/scenes/newmenu.tscn")
+	if Global.firstplay == true:
+		get_tree().change_scene_to_file("res://assets/scenes/tutorialIntro.tscn")
+	else:
+		get_tree().change_scene_to_file("res://assets/scenes/newmenu.tscn")

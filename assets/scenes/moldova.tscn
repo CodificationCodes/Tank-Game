@@ -1,16 +1,15 @@
-[gd_scene load_steps=57 format=3 uid="uid://bol07ursldr83"]
+[gd_scene load_steps=56 format=3 uid="uid://bol07ursldr83"]
 
 [ext_resource type="Script" uid="uid://blx44v1i2e3q6" path="res://assets/scripts/world.gd" id="1_b7dy1"]
 [ext_resource type="Texture2D" uid="uid://dprfttem2p01p" path="res://assets/media/moldova/Moldova.png" id="4_b7dy1"]
-[ext_resource type="PackedScene" uid="uid://bav4mjk06uod6" path="res://assets/scenes/transition_screen.tscn" id="4_iayio"]
-[ext_resource type="PackedScene" uid="uid://cia78e6fhlfkq" path="res://5HealthBar.tscn" id="5_b7dy1"]
+[ext_resource type="PackedScene" uid="uid://bav4mjk06uod6" path="res://assets/scenes/ui/transition_screen.tscn" id="4_iayio"]
 [ext_resource type="FontFile" uid="uid://blpsjmcwfqmth" path="res://assets/Panzer.ttf" id="5_v8n5k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0juu"]
 size = Vector2(1373.07, 97)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nnsk1"]
-size = Vector2(107.5, 840.5)
+size = Vector2(107.5, 846.437)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b7dy1"]
 size = Vector2(29.9796, 26.9819)
@@ -202,7 +201,7 @@ shape = SubResource("RectangleShape2D_nnsk1")
 
 [node name="West Wall" type="CollisionShape2D" parent="Collisions"]
 z_index = 1
-position = Vector2(-53, 324)
+position = Vector2(-53, 326.971)
 scale = Vector2(1.00071, 1.00071)
 shape = SubResource("RectangleShape2D_nnsk1")
 
@@ -410,10 +409,10 @@ texture_filter = 2
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 485.0
-offset_top = -171.0
-offset_right = 543.0
-offset_bottom = -148.0
+offset_left = 2.0
+offset_top = -24.0
+offset_right = 60.0
+offset_bottom = -1.0
 grow_horizontal = 0
 pivot_offset = Vector2(29, 13)
 text = "names"
@@ -429,10 +428,3 @@ mouse_filter = 2
 
 [node name="TransitionScreen" parent="Transition" instance=ExtResource("4_iayio")]
 visible = false
-
-[node name="Control" parent="." instance=ExtResource("5_b7dy1")]
-offset_left = 303.0
-offset_top = 55.0
-offset_right = 303.0
-offset_bottom = 55.0
-scale = Vector2(0.333, 0.333)

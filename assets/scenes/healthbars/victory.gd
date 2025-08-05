@@ -12,25 +12,9 @@
 #MIT license (See README.md for info)
 #Copyright (c) 2025 Spike Forsythe ❤️
 
-extends Node
+extends Control
 
-var playerName
-var tank1IDselected : int = 1
-var tank2IDselected : int = 1
-var tank1health : int
-var tank2health : int
-var p1money : int
-var p2money : int
-var winningtank 
-var firstplay
 
-func _ready():
-	debug_loop()
-	
-func debug_loop() -> void:
-	pass
-#	while true:
-#		print("Tank1ID: " + str(tank1health))
-#		print("Tank2ID: " + str(tank1health))
-#		print(" ")
-#		await get_tree().create_timer(2.0).timeout
+
+func _main_menu_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://assets/scenes/ui/newmenu.tscn")

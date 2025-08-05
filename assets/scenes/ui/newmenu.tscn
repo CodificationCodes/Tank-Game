@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://bek0yasultr7k" path="res://assets/media/abrams/AbramsFull.png" id="13_kt0lu"]
 [ext_resource type="Texture2D" uid="uid://b7lrixyiofal7" path="res://assets/media/t90/t90full.png" id="14_lcy4l"]
 [ext_resource type="Texture2D" uid="uid://cbwgkd833hs48" path="res://assets/media/devcar/devCar.png" id="15_lkbtv"]
-[ext_resource type="PackedScene" uid="uid://bav4mjk06uod6" path="res://assets/scenes/transition_screen.tscn" id="16_lcy4l"]
+[ext_resource type="PackedScene" uid="uid://bav4mjk06uod6" path="res://assets/scenes/ui/transition_screen.tscn" id="16_lcy4l"]
 [ext_resource type="FontFile" uid="uid://blpsjmcwfqmth" path="res://assets/Panzer.ttf" id="17_fh8go"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bdmk7"]

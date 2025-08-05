@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdkkqi8bm53mb"
-path="res://.godot/imported/Healthbar_for_5_HP_progress1.png-24fc201930adc395a06d0be249a1e822.ctex"
+uid="uid://7ugn5bsfvw3"
+path="res://.godot/imported/Healthbar_for_4_HP_progress2.png-647ee0724a01e4ce9523f822f814f235.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/media/healthbars/Healthbar_for_5_HP_progress1.png"
-dest_files=["res://.godot/imported/Healthbar_for_5_HP_progress1.png-24fc201930adc395a06d0be249a1e822.ctex"]
+source_file="res://assets/media/healthbarsp1/Healthbar_for_4_HP_progress2.png"
+dest_files=["res://.godot/imported/Healthbar_for_4_HP_progress2.png-647ee0724a01e4ce9523f822f814f235.ctex"]
 
 [params]
 

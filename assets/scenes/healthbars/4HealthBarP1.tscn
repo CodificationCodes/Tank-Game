@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://c0d213eb5qqb"]
+
+[ext_resource type="Texture2D" uid="uid://cvk8qurtp83qb" path="res://assets/media/healthbarsp1/Healthbar_Empty.png" id="2_v8kgm"]
+[ext_resource type="Texture2D" uid="uid://7ugn5bsfvw3" path="res://assets/media/healthbarsp1/Healthbar_for_4_HP_progress2.png" id="3_473wy"]
+[ext_resource type="Texture2D" uid="uid://csk6vcd23pnge" path="res://assets/media/healthbarsp1/Healthbar_for_4_HP_progress3.png" id="4_ahuv3"]
+[ext_resource type="Texture2D" uid="uid://ds0ew43e3fags" path="res://assets/media/healthbarsp1/Healthbar_for_4_HP_progress4.png" id="5_d3uau"]
+[ext_resource type="Texture2D" uid="uid://cdkkqi8bm53mb" path="res://assets/media/healthbarsp1/Healthbar_Full.png" id="5_l1os7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dvuso"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_v8kgm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_473wy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ahuv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_d3uau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_l1os7")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="healthbar" type="AnimatedSprite2D" parent="."]
+z_index = 5
+position = Vector2(143, 617)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_dvuso")
+animation = &"new_animation"

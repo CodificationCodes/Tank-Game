@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://di56ws0aaqwi7"]
+
+[ext_resource type="Texture2D" uid="uid://d10hq484pir0w" path="res://assets/media/healthbarsp2/P2_prog_empty.png" id="1_arg8t"]
+[ext_resource type="Texture2D" uid="uid://0rmu1y564dpv" path="res://assets/media/healthbarsp2/P2_5_1.png" id="2_c5yc7"]
+[ext_resource type="Texture2D" uid="uid://bajlfya0lsd7q" path="res://assets/media/healthbarsp2/P2_5_2.png" id="3_n7oao"]
+[ext_resource type="Texture2D" uid="uid://bljv0h30gv702" path="res://assets/media/healthbarsp2/P2_5_3.png" id="4_ul572"]
+[ext_resource type="Texture2D" uid="uid://dxtftjoyku415" path="res://assets/media/healthbarsp2/P2_5_4.png" id="5_2g2rs"]
+[ext_resource type="Texture2D" uid="uid://n4memi37vr5t" path="res://assets/media/healthbarsp2/P2_prog_full.png" id="6_1xyo0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dvuso"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_arg8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_c5yc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n7oao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ul572")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2g2rs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1xyo0")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="healthbar" type="AnimatedSprite2D" parent="."]
+position = Vector2(1058, 57)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_dvuso")
+animation = &"new_animation"

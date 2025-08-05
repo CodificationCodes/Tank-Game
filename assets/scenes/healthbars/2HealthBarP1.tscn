@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmyc7l7j86yxo"]
+
+[ext_resource type="Texture2D" uid="uid://cvk8qurtp83qb" path="res://assets/media/healthbarsp1/Healthbar_Empty.png" id="1_gk3ec"]
+[ext_resource type="Texture2D" uid="uid://csk6vcd23pnge" path="res://assets/media/healthbarsp1/Healthbar_for_4_HP_progress3.png" id="3_4ehna"]
+[ext_resource type="Texture2D" uid="uid://cdkkqi8bm53mb" path="res://assets/media/healthbarsp1/Healthbar_Full.png" id="5_6wtur"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_povi0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gk3ec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4ehna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6wtur")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="healthbar" type="AnimatedSprite2D" parent="."]
+z_index = 5
+position = Vector2(143, 617)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_povi0")

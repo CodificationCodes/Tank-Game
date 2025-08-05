@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dmdn4l7xibu57"]
 
-[ext_resource type="Script" uid="uid://717hebrhux02" path="res://assets/scripts/options.gd" id="1_26tx4"]
+[ext_resource type="Script" uid="uid://717hebrhux02" path="res://assets/scripts/options.gd" id="1_leffa"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_26tx4")
+script = ExtResource("1_leffa")
 
 [node name="fullscrene" type="Button" parent="."]
 layout_mode = 0
