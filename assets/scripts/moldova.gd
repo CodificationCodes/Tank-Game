@@ -74,7 +74,7 @@ func _ready():
 		var tank2 = t90_2.instantiate()
 		add_child(tank2)
 		healthbarP2 = _4_HEALTH_BAR_P_2.instantiate()
-		add_child(tank2)
+		add_child(healthbarP2)
 		tank2.rotation = deg_to_rad(270)
 		tank2.position = Vector2(1138, 590)
 	else:
@@ -85,15 +85,21 @@ func _ready():
 		Global.tank2health = 1
 		tank2.rotation = deg_to_rad(270)
 		tank2.position = Vector2(1138, 590)
+	
+	healthbarP1.z_index = 5
+	healthbarP2.z_index = 5
 
 func _process(delta):
 	healthbarP1.get_child(0).frame = Global.tank1health
 	healthbarP2.get_child(0).frame = Global.tank2health
 	
+	
 	if Global.tank1health == 0:
+		Global.winningtank = 2
 		await get_tree().create_timer(4.0).timeout
-		get_tree().change_scene_to_file("res://assets/scenes/healthbars/victory.tscn")
+		get_tree().change_scene_to_file("res://assets/scenes/ui/victory.tscn")
 	elif Global.tank2health == 0:
+		Global.winningtank = 1
 		await get_tree().create_timer(4.0).timeout
 		get_tree().change_scene_to_file("res://assets/scenes/ui/victory.tscn")
 

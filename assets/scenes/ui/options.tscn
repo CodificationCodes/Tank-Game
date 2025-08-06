@@ -19,6 +19,22 @@ offset_right = 492.0
 offset_bottom = 240.0
 text = "Toggle Fullscreen"
 
+[node name="clear moneys" type="Button" parent="."]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 261.0
+offset_right = 492.0
+offset_bottom = 469.0
+text = "Clear Money"
+
+[node name="add moneys" type="Button" parent="."]
+layout_mode = 0
+offset_left = 515.0
+offset_top = 261.0
+offset_right = 954.0
+offset_bottom = 469.0
+text = "Infinite Money"
+
 [node name="Return" type="Button" parent="."]
 layout_mode = 0
 offset_left = 992.0
@@ -28,4 +44,6 @@ offset_bottom = 70.0
 text = "go back to the menu"
 
 [connection signal="pressed" from="fullscrene" to="." method="_on_fullscreen_pressed"]
+[connection signal="pressed" from="clear moneys" to="." method="_on_clear_moneys_pressed"]
+[connection signal="pressed" from="add moneys" to="." method="_on_add_moneys_pressed"]
 [connection signal="pressed" from="Return" to="." method="_on_return_pressed"]

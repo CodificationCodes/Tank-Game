@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dwboyex48234r"
+path="res://.godot/imported/Decisions - Kevin Macleod.mp3-f64de58b27c0731b4b9bd83516e30657.mp3str"
+
+[deps]
+
+source_file="res://assets/sound effects/music/Decisions - Kevin Macleod.mp3"
+dest_files=["res://.godot/imported/Decisions - Kevin Macleod.mp3-f64de58b27c0731b4b9bd83516e30657.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

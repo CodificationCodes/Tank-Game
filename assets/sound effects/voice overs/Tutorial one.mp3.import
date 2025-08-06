@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://caotd0iypt1q2"
+path="res://.godot/imported/Tutorial one.mp3-ac1e3cf4ccbf6600b9335e33a3f0c5e2.mp3str"
+
+[deps]
+
+source_file="res://assets/sound effects/voice overs/Tutorial one.mp3"
+dest_files=["res://.godot/imported/Tutorial one.mp3-ac1e3cf4ccbf6600b9335e33a3f0c5e2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

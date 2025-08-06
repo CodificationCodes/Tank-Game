@@ -21,7 +21,8 @@ var tank1health : int
 var tank2health : int
 var p1money : int
 var p2money : int
-var winningtank 
+var winningtank
+var selectedmap = "moldova"
 var firstplay
 
 func _ready():

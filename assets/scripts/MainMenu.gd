@@ -80,7 +80,7 @@ func _on_begin_pressed() -> void:
 	transition_screen.fade_out()
 
 func _on_settings_pressed() -> void:
-	get_tree().change_scene_to_file("res://assets/scenes/options.tscn")
+	get_tree().change_scene_to_file("res://assets/scenes/ui/options.tscn")
 
 func _on_transition_halfway():
 	get_tree().change_scene_to_file("res://assets/scenes/moldova.tscn")

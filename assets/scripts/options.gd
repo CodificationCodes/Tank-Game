@@ -24,3 +24,15 @@ func _on_fullscreen_pressed() -> void:
 
 func _on_return_pressed() -> void:
 	get_tree().change_scene_to_file("res://assets/scenes/ui/newmenu.tscn")
+
+
+func _on_clear_moneys_pressed() -> void:
+	Global.p1money = 0
+	Global.p2money = 0 
+	saveManager.save()
+
+
+func _on_add_moneys_pressed() -> void:
+	Global.p1money = 9999999
+	Global.p2money = 9999999
+	saveManager.save()

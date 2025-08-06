@@ -14,7 +14,31 @@
 
 extends Control
 
+func _ready() -> void:
+	# if statement between 19-26 chooses what tank to feature as winning
+	if Global.winningtank == 1:
+		$VictoryForeground.frame = 0
+		Global.p1money += 100
+		Global.p2money += -25
+		saveManager.save()
+	else:
+		$VictoryForeground.frame = 1
+		Global.p2money += 100
+		Global.p2money += -25
+		saveManager.save()
 
-
-func _main_menu_button_pressed() -> void:
+	# if statement 26-29 chooses what map to place on the background of the victory screen
+	if Global.selectedmap == "moldova":
+		$"VictoryBackground(Map)".frame = 0
+	else:
+		pass
+	
+	if Global.tank1IDselected == 1:
+		$P1_Tank.frame = 0
+	elif Global.tank1IDselected == 2:
+		$P1_Tank.frame = 1
+	else:
+		$P1_Tank.frame = 2
+		
+func _on_main_menu_pressed() -> void:
 	get_tree().change_scene_to_file("res://assets/scenes/ui/newmenu.tscn")

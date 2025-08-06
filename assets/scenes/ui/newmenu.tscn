@@ -1,8 +1,8 @@
 [gd_scene load_steps=27 format=4 uid="uid://bm82kc7vftxf7"]
 
 [ext_resource type="Script" uid="uid://d1et57o75qc08" path="res://assets/scripts/MainMenu.gd" id="1_0u3re"]
-[ext_resource type="Texture2D" uid="uid://cqmo3caijsy2i" path="res://assets/media/menus/MainMenu.png" id="1_yidlm"]
 [ext_resource type="Texture2D" uid="uid://bc4iu1wu1dwkc" path="res://assets/media/buttons/Settings1.png" id="2_0rbbo"]
+[ext_resource type="Texture2D" uid="uid://bns3v5t8u5vbl" path="res://assets/media/menus/MainMenuFinal.png" id="2_5qmi6"]
 [ext_resource type="Texture2D" uid="uid://c8jsyav1miph6" path="res://assets/media/buttons/Settings2.png" id="3_mjqqm"]
 [ext_resource type="Texture2D" uid="uid://ck3wb4xlk60c8" path="res://assets/media/buttons/Quit1.png" id="4_gepb1"]
 [ext_resource type="Texture2D" uid="uid://cf0u0yf5p3wj5" path="res://assets/media/buttons/Quit2.png" id="5_1ddae"]
@@ -154,7 +154,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.33334, 0.33334)
-texture = ExtResource("1_yidlm")
+texture = ExtResource("2_5qmi6")
 
 [node name="Buttons" type="Control" parent="."]
 anchors_preset = 0

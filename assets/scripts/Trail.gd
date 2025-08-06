@@ -21,7 +21,7 @@ var point
 func _ready():
 	set_as_top_level(true)
 #Fade the effect out 	/ add the effect
-func _physics_process(delta):
+func _physics_process(_delta):
 	point = get_parent().global_position
 	add_point(point)
 	if points.size() > 100:
