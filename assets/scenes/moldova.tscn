@@ -1,6 +1,6 @@
 [gd_scene load_steps=56 format=3 uid="uid://bol07ursldr83"]
 
-[ext_resource type="Script" uid="uid://blx44v1i2e3q6" path="res://assets/scripts/world.gd" id="1_b7dy1"]
+[ext_resource type="Script" uid="uid://blx44v1i2e3q6" path="res://assets/scripts/moldova.gd" id="1_b7dy1"]
 [ext_resource type="Texture2D" uid="uid://dprfttem2p01p" path="res://assets/media/moldova/Moldova.png" id="4_b7dy1"]
 [ext_resource type="PackedScene" uid="uid://bav4mjk06uod6" path="res://assets/scenes/ui/transition_screen.tscn" id="4_iayio"]
 [ext_resource type="FontFile" uid="uid://blpsjmcwfqmth" path="res://assets/Panzer.ttf" id="5_v8n5k"]

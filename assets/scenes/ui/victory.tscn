@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dckcwnnd2rpv2"]
+[gd_scene load_steps=2 format=3 uid="uid://dckcwnnd2rpv2"]
 
-[ext_resource type="Script" uid="uid://bc2tcfiywbb1r" path="res://assets/scenes/healthbars/victory.gd" id="1_4x2hu"]
-[ext_resource type="Texture2D" uid="uid://doqfqyew53nwx" path="res://assets/media/tyler clicker/word.jpg" id="2_2yguw"]
+[ext_resource type="Script" uid="uid://bc2tcfiywbb1r" path="res://assets/scripts/victory.gd" id="1_4x2hu"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -11,12 +10,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4x2hu")
-
-[node name="Word" type="Sprite2D" parent="."]
-position = Vector2(526, 290)
-rotation = -0.463648
-scale = Vector2(0.638972, 0.282974)
-texture = ExtResource("2_2yguw")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0

@@ -93,7 +93,9 @@ func _process(delta):
 	if Global.tank1health == 0:
 		await get_tree().create_timer(4.0).timeout
 		get_tree().change_scene_to_file("res://assets/scenes/healthbars/victory.tscn")
-
+	elif Global.tank2health == 0:
+		await get_tree().create_timer(4.0).timeout
+		get_tree().change_scene_to_file("res://assets/scenes/ui/victory.tscn")
 
 func _on_transition_finished():
 	transition_screen.visible = false

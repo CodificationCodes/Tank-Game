@@ -17,6 +17,6 @@ extends Control
 func _on_button_pressed() -> void:
 	saveManager.load_data()
 	if Global.firstplay == true:
-		get_tree().change_scene_to_file("res://assets/scenes/tutorialIntro.tscn")
+		get_tree().change_scene_to_file("res://assets/scenes/ui/tutorialIntro.tscn")
 	else:
-		get_tree().change_scene_to_file("res://assets/scenes/newmenu.tscn")
+		get_tree().change_scene_to_file("res://assets/scenes/ui/newmenu.tscn")

@@ -23,4 +23,4 @@ func _on_fullscreen_pressed() -> void:
 
 
 func _on_return_pressed() -> void:
-	get_tree().change_scene_to_file("res://assets/scenes/newmenu.tscn")
+	get_tree().change_scene_to_file("res://assets/scenes/ui/newmenu.tscn")
