@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rhlt1ppclm2r"
-path="res://.godot/imported/TutorialProto.png-21db213717efa19676f1414368edd951.ctex"
+uid="uid://cs70gqoi4h5ly"
+path="res://.godot/imported/BIG Compound Map-2.png (2).png-ec3cbd3086dc3cbc250e8e459f9bb474.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/media/tutorial/TutorialProto.png"
-dest_files=["res://.godot/imported/TutorialProto.png-21db213717efa19676f1414368edd951.ctex"]
+source_file="res://assets/media/tutorial/BIG Compound Map-2.png (2).png"
+dest_files=["res://.godot/imported/BIG Compound Map-2.png (2).png-ec3cbd3086dc3cbc250e8e459f9bb474.ctex"]
 
 [params]
 
