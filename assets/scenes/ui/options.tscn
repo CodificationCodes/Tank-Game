@@ -25,7 +25,7 @@ offset_left = 53.0
 offset_top = 261.0
 offset_right = 492.0
 offset_bottom = 469.0
-text = "Clear Money"
+text = "Clear Data"
 
 [node name="add moneys" type="Button" parent="."]
 layout_mode = 0

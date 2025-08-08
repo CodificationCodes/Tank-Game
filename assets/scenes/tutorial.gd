@@ -27,16 +27,27 @@ var waiting := false
 var objective1complete = false
 var objective2complete = false
 var objective3complete = false
+var blockfirstobjectives = false
+var tempblock = false
 
 func _ready():
 	randomize()
 	wait_timer.timeout.connect(_on_wait_timer_timeout)
 	choose_new_target()
 	$CanvasLayer/VO2Script.hide()
+	$CanvasLayer/DroneHealth.hide()
+	$CanvasLayer/DroneHealth.frame = 6
 	await get_tree().create_timer(1.5).timeout
 	$VO1.play()
 
 func _physics_process(delta):
+	$CanvasLayer/DroneHealth.frame = Global.dronehealth
+	
+	if Global.dronehealth == 0 and tempblock == false:
+		tempblock = true
+		changescene()
+		
+	
 	# Manages first objective
 	if Input.is_action_pressed("tank1up") or Input.is_action_pressed("tank1down") or Input.is_action_pressed("tank1left") or Input.is_action_pressed("tank1right"):
 		objective1complete = true
@@ -58,11 +69,11 @@ func _physics_process(delta):
 		
 		
 	# Update objectives display
-	if objective1complete == true:
+	if objective1complete == true and blockfirstobjectives == false:
 		$CanvasLayer/Objectives.frame = 1
-	if objective2complete == true:
+	if objective2complete == true and blockfirstobjectives == false:
 		$CanvasLayer/Objectives.frame = 2
-	if objective1complete == true and objective2complete == true:
+	if objective1complete == true and objective2complete == true and blockfirstobjectives == false:
 		$CanvasLayer/Objectives.frame = 3
 		$Waypoint.show()
 	if objective3complete == true:
@@ -87,8 +98,30 @@ func _on_vo_1_finished() -> void:
 
 func _on_marker_entered(body: Node2D) -> void:
 	if body.is_in_group("Tank1"):
-		$Waypoint/Marker.hide() #Hides the marker once the tank has hit it
-		print("Waypointhidden")
+		#$Waypoint/Marker.hide() #Hides the marker once the tank has hit it
+		$Waypoint.global_position = Vector2(1000,1000)
+		print($Waypoint.global_position)
 		objective3complete = true
 		$CanvasLayer/VO2Script.show()
 		$VO2.play()
+		blockfirstobjectives = true
+		await get_tree().create_timer(21.81).timeout
+		objective1complete = false
+		objective2complete = false
+		objective3complete = false
+		$CanvasLayer/VO2Script.hide()
+		$CanvasLayer/Objectives.frame = 5
+		$CanvasLayer/DroneHealth.show()
+
+
+func changescene():
+	$TrainingEnemy.hide()
+	$CanvasLayer/Objectives.frame = 6
+	playvo()
+	Global.firstplay = false
+	saveManager.save()
+	await get_tree().create_timer(10).timeout
+	get_tree().change_scene_to_file("res://assets/scenes/ui/newmenu.tscn")
+	
+func playvo():
+	$VO3.play()

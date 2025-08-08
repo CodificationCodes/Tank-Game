@@ -28,7 +28,8 @@ func _on_return_pressed() -> void:
 
 func _on_clear_moneys_pressed() -> void:
 	Global.p1money = 0
-	Global.p2money = 0 
+	Global.p2money = 0
+	Global.firstplay = true
 	saveManager.save()
 
 

@@ -17,17 +17,21 @@ extends Node
 var playerName
 var tank1IDselected : int = 1
 var tank2IDselected : int = 1
+var dronehealth := 6
 var tank1health : int
 var tank2health : int
 var p1money : int
 var p2money : int
 var winningtank
 var selectedmap = "moldova"
-var firstplay
+var firstplay = true
+var playtimes 
 
 func _ready():
 	debug_loop()
 	
+func _physics_process(delta: float) -> void:
+	pass
 func debug_loop() -> void:
 	pass
 #	while true:

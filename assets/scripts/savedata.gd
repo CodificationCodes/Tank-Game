@@ -21,13 +21,16 @@ func save():
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
 	file.store_var(Global.p1money)
 	file.store_var(Global.p2money)
+	file.store_var(Global.firstplay)
 	
 func load_data():
 	if FileAccess.file_exists(save_path):
 		var file = FileAccess.open(save_path, FileAccess.READ)
-		Global.p1money = file.get_var(Global.p1money)
-		Global.p2money = file.get_var(Global.p2money)
+		Global.p1money = file.get_var()
+		Global.p2money = file.get_var()
+		Global.firstplay = file.get_var()
 	else:
-		print("data failed to save")
+		print("data failed to load")
 		Global.p1money = 0
-		Global.p2money = 0 
+		Global.p2money = 0
+		Global.firstplay = true

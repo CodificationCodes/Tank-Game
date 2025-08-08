@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu14nv5yyf6a6"
-path="res://.godot/imported/Ball AI Enemy.png-ae94ed9a2b0ac4d2e51c23c3818a6738.ctex"
+uid="uid://leoqhhcx88f6"
+path="res://.godot/imported/DroneHealth1.png-818374a133859bb142d40a3cb4be2e51.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/media/tutorial/Ball AI Enemy.png"
-dest_files=["res://.godot/imported/Ball AI Enemy.png-ae94ed9a2b0ac4d2e51c23c3818a6738.ctex"]
+source_file="res://assets/media/tutorial/DroneHealth1.png"
+dest_files=["res://.godot/imported/DroneHealth1.png-818374a133859bb142d40a3cb4be2e51.ctex"]
 
 [params]
 

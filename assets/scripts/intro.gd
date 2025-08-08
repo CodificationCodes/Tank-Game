@@ -20,9 +20,11 @@ func _ready():
 	print("First time playing? " + str(Global.firstplay))
 	print("Player 1 money: " + str(Global.p1money))
 	print("Player 2 money: " + str (Global.p2money))
+	saveManager.save()
 
 func _on_button_pressed() -> void:
 	if Global.firstplay == true:
-		get_tree().change_scene_to_file("res://assets/scenes/ui/tutorialIntro.tscn")
+		get_tree().change_scene_to_file("res://assets/scenes/tutorial.tscn")
 	else:
+		Global.firstplay = false
 		get_tree().change_scene_to_file("res://assets/scenes/ui/newmenu.tscn")

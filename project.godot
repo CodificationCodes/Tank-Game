@@ -45,6 +45,7 @@ Walls=""
 Tank1=""
 Tank2=""
 ExplosionRadius=""
+Drone=""
 
 [input]
 
