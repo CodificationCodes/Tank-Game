@@ -672,7 +672,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
-text = "Welcome to the United Nations Defense Force. This facility is where our main base of operations is located, and where you will receive training on how to operate your vehicle to a proficient standard. In the top right of your heads up display, you will see a list of objectives and each will have a marker on the map. I will check back in with you to explain your final objective later. Good luck private!"
+text = "Welcome to the United Nations Defense Force. This facility is where our main base of operations is located, and where you will receive training on how to operate your vehicle to a proficient standard. In the top right of your heads up display, you will see a list of objectives and each will have a marker on the map. I will check back in with you to explain your final objective later. Good luck Private!"
 fit_content = true
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/VO1Script"]
@@ -698,7 +698,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
-text = "Well done on getting the basics down already private! I can already tell you will be a valuable asset to our armored division, that is, if you can complete this firing test and land six hits on our gyro-stabilized training drone. This drone uses an advanced monitoring system to automatically move itself without human input. Lets see if you can complete the task at hand!"
+text = "Well done on getting the basics down already Private! I can already tell you will be a valuable asset to our armored division, that is, if you can complete this firing test and land six hits on our gyro-stabilized training drone. This drone uses an advanced monitoring system to automatically move itself without human input. Lets see if you can complete the task at hand!"
 fit_content = true
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/VO2Script"]
@@ -724,7 +724,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
-text = "Well done private! You have passed your test with flying colors. You will now be brought to your deployment board where you can choose the battle you want to fight. Happy fighting!"
+text = "Well done Private! You have passed your test with flying colors. You will now be brought to your deployment board where you can choose the battle you want to fight. Happy fighting!"
 fit_content = true
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/VO3Script"]
