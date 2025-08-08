@@ -41,4 +41,5 @@ func _ready() -> void:
 		$P1_Tank.frame = 2
 		
 func _on_main_menu_pressed() -> void:
+	$Click.play()
 	get_tree().change_scene_to_file("res://assets/scenes/ui/newmenu.tscn")

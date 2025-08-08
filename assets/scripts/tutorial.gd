@@ -40,6 +40,7 @@ func _ready():
 	$CanvasLayer/DroneHealth.frame = 6
 	await get_tree().create_timer(1.5).timeout
 	$VO1.play()
+	$BackgroundCinematic.play()
 
 func _physics_process(delta):
 	$CanvasLayer/DroneHealth.frame = Global.dronehealth

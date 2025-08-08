@@ -15,6 +15,7 @@
 extends Control 
 
 func _ready():
+	$AudioStreamPlayer.play()
 	saveManager.load_data()
 	print("-User Information-")
 	print("First time playing? " + str(Global.firstplay))
@@ -23,6 +24,7 @@ func _ready():
 	saveManager.save()
 
 func _on_button_pressed() -> void:
+	$Click.play()
 	if Global.firstplay == true:
 		get_tree().change_scene_to_file("res://assets/scenes/tutorial.tscn")
 	else:

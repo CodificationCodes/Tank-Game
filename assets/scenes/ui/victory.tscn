@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dckcwnnd2rpv2"]
+[gd_scene load_steps=12 format=3 uid="uid://dckcwnnd2rpv2"]
 
 [ext_resource type="Script" uid="uid://bc2tcfiywbb1r" path="res://assets/scripts/victory.gd" id="1_4x2hu"]
 [ext_resource type="Texture2D" uid="uid://sh0carqm5pan" path="res://assets/media/menus/VictoryP1.png" id="2_ysf1u"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b8v5jx5ihexqm" path="res://assets/media/abrams/Rotated Abrams.png" id="5_qdkg2"]
 [ext_resource type="Texture2D" uid="uid://5n83xrrib7qe" path="res://assets/media/t90/Rotated T90.png" id="6_lysjw"]
 [ext_resource type="Texture2D" uid="uid://c1tk5g4vrnyna" path="res://assets/media/devcar/Rotated Car.png" id="7_lysjw"]
+[ext_resource type="AudioStream" uid="uid://clduj7rswc8co" path="res://assets/sound effects/Click.mp3" id="8_nx41q"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qdkg2"]
 animations = [{
@@ -71,11 +72,18 @@ scale = Vector2(0.333, 0.333)
 sprite_frames = SubResource("SpriteFrames_pyqth")
 
 [node name="MainMenu" type="Button" parent="."]
-layout_mode = 0
-offset_left = 514.0
-offset_top = 338.0
-offset_right = 687.0
-offset_bottom = 369.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -142.5
+offset_top = -12.5
+offset_right = 142.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
 text = "Return to Main Menu"
 
 [node name="P1_Tank" type="AnimatedSprite2D" parent="."]
@@ -90,5 +98,8 @@ scale = Vector2(0.379822, 0.379822)
 sprite_frames = SubResource("SpriteFrames_nx41q")
 frame_progress = 0.247469
 flip_h = true
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_nx41q")
 
 [connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]

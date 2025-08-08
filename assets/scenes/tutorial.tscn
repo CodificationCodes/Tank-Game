@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=3 uid="uid://du7ehqneina1s"]
+[gd_scene load_steps=96 format=3 uid="uid://du7ehqneina1s"]
 
 [ext_resource type="Texture2D" uid="uid://cs70gqoi4h5ly" path="res://assets/media/tutorial/BIG Compound Map-2.png (2).png" id="1_7k2ww"]
 [ext_resource type="Script" uid="uid://cuu3ntx4w1op5" path="res://assets/scripts/tutorial.gd" id="1_tygdc"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://b572p0t723kmq" path="res://assets/media/tutorial/DroneHealth2.png" id="17_f7dqo"]
 [ext_resource type="Texture2D" uid="uid://leoqhhcx88f6" path="res://assets/media/tutorial/DroneHealth1.png" id="18_777ln"]
 [ext_resource type="Texture2D" uid="uid://dfgrihu3juty" path="res://assets/media/tutorial/DroneHealth6.png" id="19_3dl30"]
+[ext_resource type="AudioStream" uid="uid://c6msykcn5gsto" path="res://assets/sound effects/music/BackgroundCinematic.mp3" id="23_0b8ou"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uan2t"]
 radius = 29.0689
@@ -760,6 +761,10 @@ texture = ExtResource("11_trfbv")
 position = Vector2(832, 328)
 scale = Vector2(2.71987, 2.71987)
 shape = SubResource("CircleShape2D_5jq4b")
+
+[node name="BackgroundCinematic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_0b8ou")
+volume_db = -30.0
 
 [connection signal="finished" from="VO1" to="." method="_on_vo_1_finished"]
 [connection signal="body_entered" from="Waypoint/Area2D" to="." method="_on_marker_entered"]

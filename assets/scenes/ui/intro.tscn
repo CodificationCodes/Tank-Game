@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dn0jrpn57ufuh"]
+[gd_scene load_steps=5 format=3 uid="uid://dn0jrpn57ufuh"]
 
 [ext_resource type="Script" uid="uid://dq3acjhr6an5f" path="res://assets/scripts/intro.gd" id="1_50b4g"]
 [ext_resource type="Texture2D" uid="uid://b30d06mflh5po" path="res://assets/media/menus/IntroScreen.png" id="2_samkx"]
 [ext_resource type="AudioStream" uid="uid://dwboyex48234r" path="res://assets/sound effects/music/Decisions - Kevin Macleod.mp3" id="3_n7apw"]
+[ext_resource type="AudioStream" uid="uid://clduj7rswc8co" path="res://assets/sound effects/Click.mp3" id="4_samkx"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -29,7 +30,9 @@ flat = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_n7apw")
-autoplay = true
 parameters/looping = true
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_samkx")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
