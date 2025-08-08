@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://4b0em27qdvun"
+path="res://.godot/imported/TankFire.mp3-2596d3a64dc9d2fd776ed917ceff828a.mp3str"
+
+[deps]
+
+source_file="res://assets/sound effects/tanks/TankFire.mp3"
+dest_files=["res://.godot/imported/TankFire.mp3-2596d3a64dc9d2fd776ed917ceff828a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

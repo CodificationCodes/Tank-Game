@@ -24,7 +24,7 @@ func _ready() -> void:
 	else:
 		$VictoryForeground.frame = 1
 		Global.p2money += 100
-		Global.p2money += -25
+		Global.p1money += -25
 		saveManager.save()
 
 	# if statement 26-29 chooses what map to place on the background of the victory screen

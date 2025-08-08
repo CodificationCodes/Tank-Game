@@ -1,9 +1,12 @@
-[gd_scene load_steps=56 format=3 uid="uid://bol07ursldr83"]
+[gd_scene load_steps=60 format=3 uid="uid://bol07ursldr83"]
 
 [ext_resource type="Script" uid="uid://blx44v1i2e3q6" path="res://assets/scripts/moldova.gd" id="1_b7dy1"]
 [ext_resource type="Texture2D" uid="uid://dprfttem2p01p" path="res://assets/media/moldova/Moldova.png" id="4_b7dy1"]
 [ext_resource type="PackedScene" uid="uid://bav4mjk06uod6" path="res://assets/scenes/ui/transition_screen.tscn" id="4_iayio"]
+[ext_resource type="AudioStream" uid="uid://ciy7stuj0qrgv" path="res://assets/sound effects/tanks/DistantTankFiring.mp3" id="5_b7dy1"]
 [ext_resource type="FontFile" uid="uid://blpsjmcwfqmth" path="res://assets/Panzer.ttf" id="5_v8n5k"]
+[ext_resource type="Texture2D" uid="uid://cvk8qurtp83qb" path="res://assets/media/healthbarsp1/Healthbar_Empty.png" id="6_47nxv"]
+[ext_resource type="Texture2D" uid="uid://cdkkqi8bm53mb" path="res://assets/media/healthbarsp1/Healthbar_Full.png" id="7_owieu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0juu"]
 size = Vector2(1373.07, 97)
@@ -165,6 +168,20 @@ size = Vector2(46.9749, 30.9857)
 font = ExtResource("5_v8n5k")
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v8n5k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_47nxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_owieu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="World Collection" type="Node2D"]
 script = ExtResource("1_b7dy1")
@@ -428,3 +445,15 @@ mouse_filter = 2
 
 [node name="TransitionScreen" parent="Transition" instance=ExtResource("4_iayio")]
 visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_b7dy1")
+volume_db = -15.0
+autoplay = true
+parameters/looping = true
+
+[node name="healthbar" type="AnimatedSprite2D" parent="."]
+z_index = 5
+position = Vector2(143, 617)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_v8n5k")

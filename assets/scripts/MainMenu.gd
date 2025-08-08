@@ -48,10 +48,12 @@ func _process(_delta):
 		tank2currentframe = 0
 
 func _on_p_1_vehicle_up_pressed() -> void:
+	$Click.play()
 	tank1selection += 1
 	tank1currentframe += 1
 	
 func _on_p_1_vehicle_down_pressed() -> void:
+	$Click.play()
 	if tank1selection == 1:
 		tank1selection = 3
 		tank1currentframe += 2
@@ -60,10 +62,12 @@ func _on_p_1_vehicle_down_pressed() -> void:
 		tank1currentframe -= 1
 
 func _on_p_2_vehicle_up_pressed() -> void:
+	$Click.play()
 	tank2selection += 1
 	tank2currentframe += 1
 
 func _on_p_2_vehicle_down_pressed() -> void:
+	$Click.play()
 	if tank2selection == 1:
 		tank2selection = 3
 		tank2currentframe += 2
@@ -72,15 +76,23 @@ func _on_p_2_vehicle_down_pressed() -> void:
 		tank2currentframe -= 1
 
 func _on_quit_pressed() -> void:
+	$Click.play()
 	saveManager.save()
 	get_tree().quit()
 
 func _on_begin_pressed() -> void:
+	$Click.play()
 	saveManager.save()
 	transition_screen.fade_out()
 
 func _on_settings_pressed() -> void:
+	$Click.play()
 	get_tree().change_scene_to_file("res://assets/scenes/ui/options.tscn")
 
 func _on_transition_halfway():
 	get_tree().change_scene_to_file("res://assets/scenes/moldova.tscn")
+
+
+func _on_credits_pressed() -> void:
+	$Click.play()
+	get_tree().change_scene_to_file("res://assets/scenes/ui/credits.tscn")

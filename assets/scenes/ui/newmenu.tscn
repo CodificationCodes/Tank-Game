@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://bm82kc7vftxf7"]
+[gd_scene load_steps=28 format=4 uid="uid://bm82kc7vftxf7"]
 
 [ext_resource type="Script" uid="uid://d1et57o75qc08" path="res://assets/scripts/MainMenu.gd" id="1_0u3re"]
 [ext_resource type="Texture2D" uid="uid://bc4iu1wu1dwkc" path="res://assets/media/buttons/Settings1.png" id="2_0rbbo"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://cbwgkd833hs48" path="res://assets/media/devcar/devCar.png" id="15_lkbtv"]
 [ext_resource type="PackedScene" uid="uid://bav4mjk06uod6" path="res://assets/scenes/ui/transition_screen.tscn" id="16_lcy4l"]
 [ext_resource type="FontFile" uid="uid://blpsjmcwfqmth" path="res://assets/Panzer.ttf" id="17_fh8go"]
+[ext_resource type="AudioStream" uid="uid://clduj7rswc8co" path="res://assets/sound effects/Click.mp3" id="19_52l2c"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bdmk7"]
 load_path = "res://.godot/imported/TankSel.png-29f685aeb0b754d7bf988d4f508ff219.ctex"
@@ -315,8 +316,12 @@ theme_override_font_sizes/normal_font_size = 42
 text = "null"
 scroll_active = false
 
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_52l2c")
+
 [connection signal="pressed" from="Buttons/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Buttons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Buttons/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Buttons/Begin" to="." method="_on_begin_pressed"]
 [connection signal="pressed" from="Buttons/P1VehicleUp" to="." method="_on_p_1_vehicle_up_pressed"]
 [connection signal="pressed" from="Buttons/P1VehicleDown" to="." method="_on_p_1_vehicle_down_pressed"]

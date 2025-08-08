@@ -14,26 +14,31 @@
 
 extends Control
 
-func _on_fullscreen_pressed() -> void:
-	# Toggle fullscreen in a script, like from a button press or input
+
+func _on_return_pressed() -> void:
+	$Click.play()
+	get_tree().change_scene_to_file("res://assets/scenes/ui/newmenu.tscn")
+
+
+func _on_full_screen_pressed() -> void:
+	$Click.play()
+	# Toggle fullscreen
 	if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
 
-func _on_return_pressed() -> void:
-	get_tree().change_scene_to_file("res://assets/scenes/ui/newmenu.tscn")
-
-
-func _on_clear_moneys_pressed() -> void:
-	Global.p1money = 0
-	Global.p2money = 0
-	Global.firstplay = true
+func _on_inf_money_pressed() -> void:
+	$Click.play()
+	Global.p1money = 9999999
+	Global.p2money = 9999999
 	saveManager.save()
 
 
-func _on_add_moneys_pressed() -> void:
-	Global.p1money = 9999999
-	Global.p2money = 9999999
+func _on_wipe_data_pressed() -> void:
+	$Click.play()
+	Global.p1money = 0
+	Global.p2money = 0
+	Global.firstplay = true
 	saveManager.save()

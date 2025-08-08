@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b1u3s1sl6crbb"
+path="res://.godot/imported/TankMoving.mp3-4ed1646de189a2aa584a731affb859b7.mp3str"
+
+[deps]
+
+source_file="res://assets/sound effects/tanks/TankMoving.mp3"
+dest_files=["res://.godot/imported/TankMoving.mp3-4ed1646de189a2aa584a731affb859b7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

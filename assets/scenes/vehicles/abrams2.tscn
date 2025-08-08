@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://b2ifpfkem6ybk"]
+[gd_scene load_steps=8 format=3 uid="uid://b2ifpfkem6ybk"]
 
 [ext_resource type="Script" uid="uid://bv64k52yoje1s" path="res://assets/scripts/abrams2.gd" id="1_rxbg4"]
 [ext_resource type="Texture2D" uid="uid://c6ffra7vxiiqf" path="res://assets/media/abrams/Tank1.png" id="2_pll8a"]
 [ext_resource type="Texture2D" uid="uid://lcwpkjnvofct" path="res://assets/media/abrams/final brams.png" id="3_djvta"]
 [ext_resource type="PackedScene" uid="uid://vexikfxladr6" path="res://assets/scenes/trail.tscn" id="4_pll8a"]
+[ext_resource type="AudioStream" uid="uid://4b0em27qdvun" path="res://assets/sound effects/tanks/TankFire.mp3" id="5_71d6d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61cqw"]
 
@@ -68,3 +69,7 @@ position = Vector2(-11.531, -0.00994032)
 rotation = 1.5708
 scale = Vector2(1.27476, 1.06653)
 polygon = PackedVector2Array(4.00782, -90.9634, -4.99218, -90.9634, -4.99218, -35.1634, -22.4922, -24.9634, -22.9922, -0.763405, -19.9922, 32.2366, -19.9922, 37.0366, 19.8078, 37.0366, 23.0078, 4.4366, 23.0078, -25.3634, 8.60782, -33.9634, 6.50782, -33.9634, 4.50782, -40.9634)
+
+[node name="TankFire" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_71d6d")
+volume_db = -14.0

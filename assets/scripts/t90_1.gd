@@ -76,6 +76,7 @@ func _physics_process(delta):
 	
 func fire():
 	if bullet_scene:
+		$TankFire.play()
 		#print(rotation_degrees)
 		var bullet = bullet_scene.instantiate()
 		bullet.global_position = barrel.global_position

@@ -1,7 +1,7 @@
 [gd_scene load_steps=95 format=3 uid="uid://du7ehqneina1s"]
 
 [ext_resource type="Texture2D" uid="uid://cs70gqoi4h5ly" path="res://assets/media/tutorial/BIG Compound Map-2.png (2).png" id="1_7k2ww"]
-[ext_resource type="Script" uid="uid://cuu3ntx4w1op5" path="res://assets/scenes/tutorial.gd" id="1_tygdc"]
+[ext_resource type="Script" uid="uid://cuu3ntx4w1op5" path="res://assets/scripts/tutorial.gd" id="1_tygdc"]
 [ext_resource type="PackedScene" uid="uid://dgdu4ixne0s1l" path="res://assets/scenes/vehicles/abrams1.tscn" id="2_ehuit"]
 [ext_resource type="AudioStream" uid="uid://djvf3d37wl8dg" path="res://assets/sound effects/voice overs/Voice Over 1.mp3" id="4_4nq1f"]
 [ext_resource type="AudioStream" uid="uid://75pvmhr1hmwl" path="res://assets/sound effects/voice overs/Voice Over 2.mp3" id="5_5jq4b"]
@@ -683,7 +683,6 @@ scale = Vector2(0.99718, 0.836574)
 color = Color(0, 0, 0, 0.443137)
 
 [node name="VO2Script" type="RichTextLabel" parent="CanvasLayer"]
-visible = false
 z_index = 4
 anchors_preset = 8
 anchor_left = 0.5
@@ -706,6 +705,32 @@ z_index = -1
 layout_mode = 0
 offset_right = 708.0
 offset_bottom = 139.0
+scale = Vector2(0.99718, 0.836574)
+color = Color(0, 0, 0, 0.443137)
+
+[node name="VO3Script" type="RichTextLabel" parent="CanvasLayer"]
+z_index = 4
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -341.0
+offset_top = 181.5
+offset_right = 375.0
+offset_bottom = 336.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Well done private! You have passed your test with flying colors. You will now be brought to your deployment board where you can choose the battle you want to fight. Happy fighting!"
+fit_content = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/VO3Script"]
+z_index = -1
+layout_mode = 0
+offset_right = 708.0
+offset_bottom = 60.0
 scale = Vector2(0.99718, 0.836574)
 color = Color(0, 0, 0, 0.443137)
 
